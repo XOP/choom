@@ -1,6 +1,6 @@
 import { createPortal } from "react-dom";
 import { X as IconX } from "react-feather";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
@@ -8,9 +8,8 @@ import { css, jsx } from "@emotion/react";
 
 import theme from "../../theme/theme";
 
-import { Button } from "./Button";
-import { Heading } from "./Heading";
-import { useState } from "react";
+import { Button } from "../button/Button";
+import { Heading } from "../heading/Heading";
 
 const modalRoot = document.getElementById("modal");
 

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
@@ -17,7 +18,7 @@ const Heading = ({
   className,
   children,
   align = "center",
-  as = null,
+  as = '',
   level = "2",
   mb = "0",
   mt = "0",
@@ -58,5 +59,16 @@ const Heading = ({
     </ClassNames>
   );
 };
+
+Heading.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  align: PropTypes.oneOf["center", 'left', 'right', 'initial'],
+  as: PropTypes.string,
+  level: PropTypes.oneOf[1, 2, 3, 4, 5, 6, '1', '2', '3', '4', '5', '6'],
+  mb: PropTypes.oneOf['0', '0.25', '0.5', '0.75', '1', '1.5', '2', '3', '4'],
+  mt: PropTypes.oneOf['0', '0.25', '0.5', '0.75', '1', '1.5', '2', '3', '4'],
+  colorInherit: PropTypes.bool
+}
 
 export { Heading };

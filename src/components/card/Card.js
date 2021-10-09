@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
+
 import theme, { MAP_SPACE } from "../../theme/theme";
 
 const Card = ({ className, children, align = "left", padding = '2' }) => {

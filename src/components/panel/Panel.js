@@ -2,9 +2,9 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import { Card } from "./Card";
-
 import theme from "../../theme/theme";
+
+import { Card } from "../card/Card";
 
 const Panel = ({
   className,

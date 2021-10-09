@@ -15,5 +15,6 @@ node_modules
 
 # Other dependencies
 /src
+/scripts
 .editorconfig
 babel.config.js

@@ -4,6 +4,9 @@
   "description": "Good luck with a better name",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "cleanup": "rm -rf dist && mkdir dist",
     "setup": "node scripts/theme",

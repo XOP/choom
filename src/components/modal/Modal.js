@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import { createPortal } from "react-dom";
-import { X as IconX } from "react-feather";
 import { useEffect, useRef, useState } from "react";
+import { X as IconX } from "react-feather";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
@@ -8,10 +9,9 @@ import { css, jsx } from "@emotion/react";
 
 import theme from "../../theme/theme";
 
-import { Button } from "../button/Button";
-import { Heading } from "../heading/Heading";
+import { Button, Heading } from "../";
 
-const modalRoot = document.getElementById("modal");
+const modalRoot = document.getElementById("wombat-modal");
 
 const Modal = ({
   className,
@@ -64,33 +64,32 @@ const Modal = ({
 
         background: ${theme.colorLightTemp};
         color: ${theme.colorDarkTemp};
-
-        @media screen and (min-width: 980px) {
-        }
       `}
     >
       <div
         css={css`
-          @media screen and (min-width: 980px) {
-          }
+          position: absolute;
+          top: ${theme.spaceOneAndHalf};
+          right: ${theme.spaceOne};
+          z-index: 1000;
         `}
       >
-        <div
-          css={css`
-            position: absolute;
-            top: ${theme.spaceOneAndHalf};
-            right: ${theme.spaceOne};
-          `}
-        >
-          <Button size="small" isIcon onClick={handleClose}>
-            <IconX />
-          </Button>
-        </div>
+        <Button size="small" isIcon onClick={handleClose}>
+          <IconX />
+        </Button>
+      </div>
 
+      {title && (
         <Heading level="3" colorInherit mb="2">
           {title}
         </Heading>
-
+      )}
+      <div
+        css={css`
+          position: relative;
+          z-index: 0;
+        `}
+      >
         {children}
       </div>
     </section>
@@ -99,4 +98,12 @@ const Modal = ({
   return createPortal(content, elRef.current);
 };
 
-export { Modal };
+Modal.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string,
+  isOpen: PropTypes.bool,
+  onClose: PropTypes.func,
+};
+
+export default Modal;

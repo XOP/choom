@@ -1,5 +1,5 @@
 /* eslint import/no-webpack-loader-syntax: off */
-import theme from './build';
+import theme from "./build";
 
 const defaultTheme = {
   spaceEighth: theme.spaceEighth,
@@ -36,13 +36,55 @@ const defaultTheme = {
 export default defaultTheme;
 
 export const MAP_SPACE = {
-  '0': 0,
-  '0.25': theme.spaceQuarter,
-  '0.5': theme.spaceHalf,
-  '0.75': theme.spaceThreeQuarters,
-  '1': theme.spaceOne,
-  '1.5': theme.spaceOneAndHalf,
-  '2': theme.spaceTwo,
-  '3': theme.spaceThree,
-  '4': theme.spaceFour,
+  0: 0,
+  0.25: theme.spaceQuarter,
+  0.5: theme.spaceHalf,
+  0.75: theme.spaceThreeQuarters,
+  1: theme.spaceOne,
+  1.5: theme.spaceOneAndHalf,
+  2: theme.spaceTwo,
+  3: theme.spaceThree,
+  4: theme.spaceFour,
 };
+
+export const SPACE_TYPES = [
+  "0",
+  "0.25",
+  "0.5",
+  "0.75",
+  "1",
+  "1.5",
+  "2",
+  "3",
+  "4",
+];
+
+export const HEADING_LEVEL_TYPES = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+];
+
+export const TEXT_ALIGN_TYPES = ["center", "left", "right", "initial"];
+
+export const INPUT_TYPES = [
+  "button",
+  "submit",
+  "checkbox",
+  "radio",
+  "text",
+  "number",
+];
+
+export const SIZES_TYPES = ["regular", "small", "big"];
+
+export const DISPLAY_TYPES = ["block", "inline", "inline-block"];

@@ -1,7 +1,9 @@
+import PropTypes from "prop-types";
+
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
-import theme from "../../theme/theme";
+import theme, { INPUT_TYPES, SIZES_TYPES } from "../../theme/theme";
 
 const Button = ({
   className,
@@ -12,18 +14,18 @@ const Button = ({
   iconStart = null,
   iconEnd = null,
   size = "regular",
-  isIcon = false
+  isIcon = false,
 }) => {
   let paddingY = theme.spaceOne;
   let paddingX = theme.spaceOneAndHalf;
   let fontSize = theme.fontSizeN;
 
-  if (size === 'small') {
+  if (size === "small") {
     paddingY = theme.spaceHalf;
     paddingX = theme.spaceThreeQuarters;
   }
 
-  if (size === 'big') {
+  if (size === "big") {
     fontSize = theme.fontSizeL;
     paddingY = theme.spaceOneAndHalf;
     paddingX = theme.spaceTwo;
@@ -39,9 +41,7 @@ const Button = ({
       css={css`
         appearance: none;
 
-        height: calc(
-          ${paddingY} * 2 + ${fontSize} * ${theme.lineHeightN}
-        );
+        height: calc(${paddingY} * 2 + ${fontSize} * ${theme.lineHeightN});
         padding: ${paddingY} ${paddingX};
 
         border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
@@ -58,12 +58,12 @@ const Button = ({
         cursor: pointer;
         transition: all 0.15s;
 
-        @media (hover:hover) {
+        @media (hover: hover) {
           &:hover {
             filter: brightness(1.2);
           }
         }
-  
+
         &:active:not([disabled]) {
           filter: contrast(0.8);
           transform: translateY(1px);
@@ -111,4 +111,16 @@ const Button = ({
   );
 };
 
-export { Button };
+Button.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  type: PropTypes.oneOf(INPUT_TYPES),
+  iconStart: PropTypes.node,
+  iconEnd: PropTypes.node,
+  size: PropTypes.oneOf(SIZES_TYPES),
+  isIcon: PropTypes.bool,
+  onClick: PropTypes.func
+};
+
+export default Button;

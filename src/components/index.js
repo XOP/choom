@@ -1,7 +1,7 @@
-export { Button } from './button/Button';
-export { Card } from './card/Card';
-export { Heading } from './heading/Heading';
-export { Modal } from './modal/Modal';
-export { Panel } from './panel/Panel';
-export { Space } from './space/Space';
-export { Switch } from './switch/Switch';
+export { default as Button } from "./button/Button";
+export { default as Card } from "./card/Card";
+export { default as Heading } from "./heading/Heading";
+export { default as Modal } from "./modal/Modal";
+export { default as Panel } from "./panel/Panel";
+export { default as Space } from "./space/Space";
+export { default as Switch } from "./switch/Switch";

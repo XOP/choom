@@ -1,10 +1,12 @@
+import PropTypes from "prop-types";
+
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme from "../../theme/theme";
+import theme, { SPACE_TYPES } from "../../theme/theme";
 
-import { Card } from "../card/Card";
+import { Card } from "../";
 
 const Panel = ({
   className,
@@ -34,4 +36,10 @@ const Panel = ({
   );
 };
 
-export { Panel };
+Panel.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  padding: PropTypes.oneOf(SPACE_TYPES),
+};
+
+export default Panel;

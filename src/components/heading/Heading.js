@@ -4,7 +4,12 @@ import PropTypes from "prop-types";
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, ClassNames } from "@emotion/react";
-import theme, { MAP_SPACE } from "../../theme/theme";
+import theme, {
+  HEADING_LEVEL_TYPES,
+  MAP_SPACE,
+  SPACE_TYPES,
+  TEXT_ALIGN_TYPES,
+} from "../../theme/theme";
 
 const MAP_HEADING_FONTSIZE = {
   1: theme.fontSize4xl,
@@ -18,11 +23,11 @@ const Heading = ({
   className,
   children,
   align = "center",
-  as = '',
+  as = "",
   level = "2",
   mb = "0",
   mt = "0",
-  colorInherit = false
+  colorInherit = false,
 }) => {
   const tag = as || `h${level}`;
 
@@ -43,13 +48,13 @@ const Heading = ({
                 margin-bottom: ${marginBottom};
                 margin-top: ${marginTop};
 
-                color: ${colorInherit ? 'inherit' : theme.colorLightTemp};
+                color: ${colorInherit ? "inherit" : theme.colorLightTemp};
 
                 font-size: ${fontSize};
                 line-height: ${theme.lineHeightS};
                 text-transform: uppercase;
                 text-align: ${align};
-                text-shadow: 0 .05em 0.05em ${theme.colorThemeTemp};
+                text-shadow: 0 0.05em 0.05em ${theme.colorThemeTemp};
               `
             ),
           },
@@ -63,12 +68,12 @@ const Heading = ({
 Heading.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
-  align: PropTypes.oneOf["center", 'left', 'right', 'initial'],
+  align: PropTypes.oneOf(TEXT_ALIGN_TYPES),
   as: PropTypes.string,
-  level: PropTypes.oneOf[1, 2, 3, 4, 5, 6, '1', '2', '3', '4', '5', '6'],
-  mb: PropTypes.oneOf['0', '0.25', '0.5', '0.75', '1', '1.5', '2', '3', '4'],
-  mt: PropTypes.oneOf['0', '0.25', '0.5', '0.75', '1', '1.5', '2', '3', '4'],
-  colorInherit: PropTypes.bool
-}
+  level: PropTypes.oneOf(HEADING_LEVEL_TYPES),
+  mb: PropTypes.oneOf(SPACE_TYPES),
+  mt: PropTypes.oneOf(SPACE_TYPES),
+  colorInherit: PropTypes.bool,
+};
 
-export { Heading };
+export default Heading;

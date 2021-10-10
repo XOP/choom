@@ -1,10 +1,16 @@
+import PropTypes from "prop-types";
+
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme, { MAP_SPACE } from "../../theme/theme";
+import theme, {
+  MAP_SPACE,
+  SPACE_TYPES,
+  TEXT_ALIGN_TYPES,
+} from "../../theme/theme";
 
-const Card = ({ className, children, align = "left", padding = '2' }) => {
+const Card = ({ className, children, align = "left", padding = "2" }) => {
   const space = MAP_SPACE[String(padding)];
 
   return (
@@ -30,4 +36,11 @@ const Card = ({ className, children, align = "left", padding = '2' }) => {
   );
 };
 
-export { Card };
+Card.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  align: PropTypes.oneOf(TEXT_ALIGN_TYPES),
+  padding: PropTypes.oneOf(SPACE_TYPES),
+};
+
+export default Card;

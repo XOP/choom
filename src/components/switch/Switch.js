@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 import { useState, useRef } from "react";
 
 /** @jsxRuntime classic */
@@ -107,4 +109,11 @@ const Switch = ({
   );
 };
 
-export { Switch };
+Switch.propTypes = {
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  checked: PropTypes.bool,
+  onChange: PropTypes.func
+};
+
+export default Switch;

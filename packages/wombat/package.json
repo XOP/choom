@@ -1,0 +1,38 @@
+{
+  "name": "wombat",
+  "version": "0.0.1",
+  "description": "Good luck with a better name",
+  "main": "lib/components/index.js",
+  "module": "lib/esm/components/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "cleanup": "rm -rf lib && mkdir lib",
+    "setup": "node scripts/theme",
+    "build:env": "babel src/components -d lib/components",
+    "build:esm": "NODE_ENV=esm babel src/components -d lib/esm/components",
+    "theme:env": "babel src/theme -d lib/theme && babel src/theme/*.css -d lib/theme --copy-files",
+    "theme:esm": "babel src/theme -d lib/esm/theme && babel src/theme/*.css -d lib/esm/theme --copy-files",
+    "build": "yarn cleanup && yarn setup && yarn build:env && yarn build:esm",
+    "theme": "yarn theme:env && yarn theme:esm",
+    "compile": "yarn build && yarn theme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOP/wombat.git"
+  },
+  "author": "XOP",
+  "license": "MIT",
+  "homepage": "https://github.com/XOP/wombat#readme",
+  "dependencies": {
+    "@emotion/react": "^11.0.0",
+    "nanoid": "^3.1.29",
+    "prop-types": "^15.7.2",
+    "react-feather": "^2.0.9"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

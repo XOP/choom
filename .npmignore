@@ -14,7 +14,7 @@ yarn-error.log*
 node_modules
 
 # Other dependencies
-/src
-/scripts
+src
+scripts
 .editorconfig
 babel.config.js

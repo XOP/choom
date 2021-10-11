@@ -1,44 +1,20 @@
 {
-  "name": "wombat",
-  "version": "0.0.1",
-  "description": "Good luck with a better name",
-  "main": "dist/components/index.js",
-  "module": "dist/esm/components/index.js",
-  "files": [
-    "dist"
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "presentation/*"
   ],
   "scripts": {
-    "cleanup": "rm -rf dist && mkdir dist",
-    "setup": "node scripts/theme",
-    "build:env": "babel src/components -d dist/components",
-    "build:esm": "NODE_ENV=esm babel src/components -d dist/esm/components",
-    "theme:env": "babel src/theme -d dist/theme && babel src/theme/*.css -d dist/theme --copy-files",
-    "theme:esm": "babel src/theme -d dist/esm/theme && babel src/theme/*.css -d dist/esm/theme --copy-files",
-    "build": "yarn cleanup && yarn setup && yarn build:env && yarn build:esm",
-    "theme": "yarn theme:env && yarn theme:esm",
-    "compile": "yarn build && yarn theme"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/XOP/wombat.git"
-  },
-  "author": "XOP",
-  "license": "Apache",
-  "homepage": "https://github.com/XOP/wombat#readme",
-  "dependencies": {
-    "@emotion/react": "^11.0.0",
-    "nanoid": "^3.1.29",
-    "prop-types": "^15.7.2",
-    "react-feather": "^2.0.9"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "dev": "yarn workspace wombat-expo start",
+    "build": "yarn workspace wombat compile",
+    "theme": "yarn workspace wombat setup"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
     "@babel/core": "^7.15.8",
     "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.14.5"
+    "@babel/preset-react": "^7.14.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

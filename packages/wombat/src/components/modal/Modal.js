@@ -64,6 +64,8 @@ const Modal = ({
 
         background: ${theme.colorLightTemp};
         color: ${theme.colorDarkTemp};
+
+        font-family: ${theme.fontFamily};
       `}
     >
       <div

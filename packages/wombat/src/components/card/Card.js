@@ -17,14 +17,17 @@ const Card = ({ className, children, align = "left", padding = "2" }) => {
     <div
       className={className}
       css={css`
-        text-align: ${align};
         padding: ${space};
+        border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
+        border-radius: ${theme.radiusHeavy};
+
+        box-shadow: 0 2px 7px -2px rgba(0, 0, 0, 0.6);
         background: ${theme.colorLightTemp};
+
+        text-align: ${align};
         color: ${theme.colorDarkTemp};
         font-size: ${theme.fontSizeN};
-        border-radius: ${theme.radiusHeavy};
-        box-shadow: 0 2px 7px -2px rgba(0, 0, 0, 0.6);
-        border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
+        font-family: ${theme.fontFamily};
 
         & + & {
           margin-top: ${theme.spaceOne};

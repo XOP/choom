@@ -51,6 +51,7 @@ const Heading = ({
                 color: ${colorInherit ? "inherit" : theme.colorLightTemp};
 
                 font-size: ${fontSize};
+                font-family: ${theme.fontFamily};
                 line-height: ${theme.lineHeightS};
                 text-transform: uppercase;
                 text-align: ${align};

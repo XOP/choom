@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { Button } from 'wombat/src/components';
+import { Divider } from '../../../packages/wombat/src/components';
 
 export default {
-  title: 'Button',
-  component: Button,
+  title: 'Divider',
+  component: Divider,
   args: {
-    children: 'Wombat UI'
+    
   }
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <Divider {...args} />;
 
 export const Regular = Template.bind({});
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small'
-};
+// export const Small = Template.bind({});
+// Small.args = {
+//   size: 'small'
+// };

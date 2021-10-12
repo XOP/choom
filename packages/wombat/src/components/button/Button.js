@@ -14,20 +14,22 @@ const Button = ({
   iconStart = null,
   iconEnd = null,
   size = "regular",
+  fluid = false,
   isIcon = false,
 }) => {
-  let paddingY = theme.spaceOne;
+  let paddingY = theme.spaceThreeQuarters;
   let paddingX = theme.spaceOneAndHalf;
   let fontSize = theme.fontSizeN;
 
   if (size === "small") {
+    fontSize = theme.fontSizeM;
     paddingY = theme.spaceHalf;
     paddingX = theme.spaceThreeQuarters;
   }
 
   if (size === "big") {
     fontSize = theme.fontSizeL;
-    paddingY = theme.spaceOneAndHalf;
+    paddingY = theme.spaceOne;
     paddingX = theme.spaceTwo;
   }
 
@@ -41,8 +43,10 @@ const Button = ({
       css={css`
         appearance: none;
 
-        height: calc(${paddingY} * 2 + ${fontSize} * ${theme.lineHeightN});
+        box-sizing: border-box;
+        height: calc(${paddingY} * 2 + ${fontSize} * ${theme.lineHeightN} + 2 * ${theme.borderSizeRegular});
         padding: ${paddingY} ${paddingX};
+        width: ${fluid ? '100%' : 'auto'};
 
         border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
         border-radius: ${theme.radiusRegular};
@@ -57,6 +61,7 @@ const Button = ({
 
         cursor: pointer;
         transition: all 0.15s;
+        user-select: none;
 
         @media (hover: hover) {
           &:hover {
@@ -119,6 +124,7 @@ Button.propTypes = {
   iconStart: PropTypes.node,
   iconEnd: PropTypes.node,
   size: PropTypes.oneOf(SIZES_TYPES),
+  fluid: PropTypes.bool,
   isIcon: PropTypes.bool,
   onClick: PropTypes.func
 };

@@ -1,10 +1,21 @@
 # WOMBAT
 
-UI building blocks powered by `@emotion`.
+UI building blocks for your next React prototype.
+
+## Installation
+
+```sh
+yarn add wombat
+```
 
 ## Links
 
+Wombat UI created with the help of the following packages:
+
 - [emotion](https://emotion.sh/docs/introduction)
+- [nanoid](https://www.npmjs.com/package/nanoid)
+- [react-feather](https://www.npmjs.com/package/react-feather)
 
+---
 
-## [LICENSE](LICENSE)
+[LICENSE](LICENSE)

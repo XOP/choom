@@ -90,4 +90,12 @@ export const INPUT_TYPES = [
 
 export const SIZES_TYPES = ["regular", "small", "big"];
 
-export const DISPLAY_TYPES = ["block", "inline", "inline-block"];
+export const DISPLAY_TYPES = [
+  "block",
+  "inline",
+  "inline-block",
+  "flex",
+  "inline-flex",
+];
+
+export const ELEVATION_TYPES = [0, 1, 2, 3, "0", "1", "2", "3"];

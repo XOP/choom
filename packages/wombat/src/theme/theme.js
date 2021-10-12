@@ -109,15 +109,21 @@ export const POSITION_TYPES = [
   "initial",
 ];
 
-export const PLACEMENT_Y_TYPES = [
-  'top', 'bottom'
+export const PLACEMENT_Y_TYPES = ["top", "bottom"];
+
+export const PLACEMENT_X_TYPES = ["left", "right"];
+
+export const PLACEMENT_TYPES = [...PLACEMENT_Y_TYPES, ...PLACEMENT_X_TYPES];
+
+export const ASPECT_RATIO_TYPES = [
+  "",
+  "1:1",
+  "4:3",
+  "16:9",
+  "3:4",
+  "9:16",
+  "2:1",
+  "1:2",
 ];
 
-export const PLACEMENT_X_TYPES = [
-  'left', 'right'
-];
-
-export const PLACEMENT_TYPES = [
-  ...PLACEMENT_Y_TYPES,
-  ...PLACEMENT_X_TYPES
-];
+export const IMG_FIT_TYPES = ["fill", "cover", "contain", "initial"];

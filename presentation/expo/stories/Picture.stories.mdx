@@ -1,0 +1,43 @@
+import { Meta } from '@storybook/addon-docs';
+
+import Picture from "wombat/src/components/picture/Picture";
+
+<Meta title="Wombat Picture" />
+
+<style>{`
+  section.s {
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+`}</style>
+
+# Wombat Picture
+
+<section className="s">
+  <p>auto width and height</p>
+  <Picture src='http://placehold.it/200x100' width='auto' height='auto' />
+  
+  <p>auto width</p>
+  <Picture src='http://placehold.it/200x100' width='auto' height='50px' />
+
+  <p>auto height</p>
+  <Picture src='http://placehold.it/200x100' width='100px' height='auto' />
+</section>
+
+<section className="s">
+  <p>4:3 auto width</p>
+  <Picture src='http://placehold.it/200x100' width='auto' height='100px' aspectRatio='4:3' />
+
+  <p>4:3 auto height</p>
+  <Picture src='http://placehold.it/200x100' width='200px' height='auto' aspectRatio='4:3' />
+</section>
+
+<section className="s">
+  <p>4:3 auto width contain</p>
+  <Picture src='http://placehold.it/200x100' width='auto' height='100px' aspectRatio='4:3' fill='contain' />
+
+  <p>4:3 auto height contain</p>
+  <Picture src='http://placehold.it/200x100' width='200px' height='auto' aspectRatio='4:3' fill='contain' />
+</section>

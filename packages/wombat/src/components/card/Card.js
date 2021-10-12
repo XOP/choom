@@ -27,6 +27,7 @@ const Card = ({ className, children, align = "left", padding = "2" }) => {
         text-align: ${align};
         color: ${theme.colorDarkTemp};
         font-size: ${theme.fontSizeN};
+        line-height: ${theme.lineHeightN};
         font-family: ${theme.fontFamily};
 
         & + & {

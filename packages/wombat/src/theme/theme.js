@@ -99,3 +99,25 @@ export const DISPLAY_TYPES = [
 ];
 
 export const ELEVATION_TYPES = [0, 1, 2, 3, "0", "1", "2", "3"];
+
+export const POSITION_TYPES = [
+  "relative",
+  "static",
+  "absolute",
+  "fixed",
+  "sticky",
+  "initial",
+];
+
+export const PLACEMENT_Y_TYPES = [
+  'top', 'bottom'
+];
+
+export const PLACEMENT_X_TYPES = [
+  'left', 'right'
+];
+
+export const PLACEMENT_TYPES = [
+  ...PLACEMENT_Y_TYPES,
+  ...PLACEMENT_X_TYPES
+];

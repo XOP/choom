@@ -29,6 +29,7 @@ const Hold = ({
             className={cx(
               className,
               css`
+                flex-grow: 1;
                 flex-flow: row wrap;
                 flex-wrap: wrap;
                 min-height: 100%;

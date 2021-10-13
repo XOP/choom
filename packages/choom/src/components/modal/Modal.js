@@ -9,9 +9,9 @@ import { css, jsx } from "@emotion/react";
 
 import theme from "../../theme/theme";
 
-import { Button, Heading } from "../";
+import { Button, Heading } from "..";
 
-const modalRoot = document.getElementById("wombat-modal");
+const modalRoot = document.getElementById("choom-modal");
 
 const Modal = ({
   className,

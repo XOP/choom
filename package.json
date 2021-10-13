@@ -5,9 +5,9 @@
     "presentation/*"
   ],
   "scripts": {
-    "dev": "yarn workspace wombat-expo start",
-    "build": "yarn workspace wombat compile",
-    "theme": "yarn workspace wombat setup"
+    "dev": "yarn workspace choom-expo start",
+    "build": "yarn workspace choom compile",
+    "theme": "yarn workspace choom setup"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",

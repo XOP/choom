@@ -1,7 +1,16 @@
 {
-  "name": "wombat",
-  "version": "0.0.1",
-  "description": "Good luck with a better name",
+  "name": "choom",
+  "version": "0.0.3",
+  "description": "UI building blocks for your next ReactJS prototype",
+  "keywords": [
+    "react",
+    "ui",
+    "design-system",
+    "components",
+    "emotion",
+    "styled-components",
+    "presentational"
+  ],
   "main": "lib/components/index.js",
   "module": "lib/esm/components/index.js",
   "files": [
@@ -16,15 +25,16 @@
     "theme:esm": "babel src/theme -d lib/esm/theme && babel src/theme/*.css -d lib/esm/theme --copy-files",
     "build": "yarn cleanup && yarn setup && yarn build:env && yarn build:esm",
     "theme": "yarn theme:env && yarn theme:esm",
-    "compile": "yarn build && yarn theme"
+    "compile": "yarn build && yarn theme",
+    "prepublish": "yarn compile"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/XOP/wombat.git"
+    "url": "git+https://github.com/XOP/choom.git"
   },
   "author": "XOP",
   "license": "MIT",
-  "homepage": "https://github.com/XOP/wombat#readme",
+  "homepage": "https://github.com/XOP/choom#readme",
   "dependencies": {
     "@emotion/react": "^11.0.0",
     "nanoid": "^3.1.29",

@@ -29,17 +29,17 @@ const Media = ({
       className={className}
     >
       {start && (
-        <FlexUnit as={asUnit} grow="0" shrink="1" align='auto'>
+        <FlexUnit as={asUnit} grow="0" shrink="1" align={align}>
           {start}
         </FlexUnit>
       )}
       {children && (
-        <FlexUnit as={asUnit} grow="1" shrink="1" align='auto'>
+        <FlexUnit as={asUnit} grow="1" shrink="1" align={align}>
           {children}
         </FlexUnit>
       )}
       {end && (
-        <FlexUnit as={asUnit} grow="0" shrink="1" align='auto'>
+        <FlexUnit as={asUnit} grow="0" shrink="1" align={align}>
           {end}
         </FlexUnit>
       )}

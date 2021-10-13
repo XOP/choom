@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Divider } from '../../../packages/wombat/src/components';
+import { Divider } from '../../../packages/choom/src/components';
 
 export default {
   title: 'Divider',

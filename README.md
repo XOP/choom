@@ -1,16 +1,16 @@
-# WOMBAT
+# CHOOM
 
-UI building blocks for your next React prototype.
+Trusted UI companion for your next React prototype.
 
 ## Installation
 
 ```sh
-yarn add wombat
+yarn add choom
 ```
 
 ## Links
 
-Wombat UI created with the help of the following packages:
+CHOOM is created with the help of the following packages:
 
 - [emotion](https://emotion.sh/docs/introduction)
 - [nanoid](https://www.npmjs.com/package/nanoid)

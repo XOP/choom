@@ -3,9 +3,17 @@ export { default as Card } from "./card/Card";
 export { default as Chip } from "./chip/Chip";
 export { default as Divider } from "./divider/Divider";
 export { default as Heading } from "./heading/Heading";
+export { default as Icon } from "./icon/Icon";
 export { default as Loader } from "./loader/Loader";
 export { default as Modal } from "./modal/Modal";
 export { default as Panel } from "./panel/Panel";
 export { default as Picture } from "./picture/Picture";
 export { default as Space } from "./space/Space";
 export { default as Switch } from "./switch/Switch";
+
+export { default as Flex } from "./layout/Flex";
+export { default as FlexUnit } from "./layout/FlexUnit";
+export { default as Flow } from "./layout/Flow";
+export { default as Hold } from "./layout/Hold";
+export { default as Media } from "./layout/Media";
+export { default as Stack } from "./layout/Stack";

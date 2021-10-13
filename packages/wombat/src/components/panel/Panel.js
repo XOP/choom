@@ -1,8 +1,9 @@
+import React from "react";
 import PropTypes from "prop-types";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { css, jsx } from "@emotion/react";
+import { css, jsx, ClassNames } from "@emotion/react";
 
 import theme, {
   SPACE_TYPES,
@@ -14,6 +15,7 @@ import theme, {
 const Panel = ({
   className,
   children,
+  as = "section",
   position = "fixed",
   placement = "top",
   padding = "2",
@@ -29,36 +31,45 @@ const Panel = ({
   }
 
   return (
-    <section
-      className={className}
-      css={css`
-        position: ${position};
-        left: 0;
-        right: 0;
-        top: ${placement === "top" ? "0" : "auto"};
-        bottom: ${placement === "bottom" ? "0" : "auto"};
+    <ClassNames>
+      {({ css, cx }) => {
+        return React.createElement(
+          as,
+          {
+            className: cx(
+              className,
+              css`
+                position: ${position};
+                left: 0;
+                right: 0;
+                top: ${placement === "top" ? "0" : "auto"};
+                bottom: ${placement === "bottom" ? "0" : "auto"};
 
-        z-index: 2000;
-        padding: ${space};
-        border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
-        border-radius: ${theme.radiusRegular};
+                z-index: 2000;
+                padding: ${space};
+                border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
+                border-radius: ${theme.radiusRegular};
 
-        color: ${theme.colorDarkTemp};
-        font-size: ${theme.fontSizeN};
-        font-family: ${theme.fontFamily};
+                color: ${theme.colorDarkTemp};
+                font-size: ${theme.fontSizeN};
+                font-family: ${theme.fontFamily};
 
-        background: ${theme.colorLightTemp};
-        box-shadow: ${shadow};
-      `}
-    >
-      {children}
-    </section>
+                background: ${theme.colorLightTemp};
+                box-shadow: ${shadow};
+              `
+            ),
+          },
+          children
+        );
+      }}
+    </ClassNames>
   );
 };
 
 Panel.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
+  as: PropTypes.string,
   padding: PropTypes.oneOf(SPACE_TYPES),
   position: PropTypes.oneOf(POSITION_TYPES),
   placement: PropTypes.oneOf(PLACEMENT_Y_TYPES),

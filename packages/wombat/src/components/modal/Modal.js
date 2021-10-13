@@ -54,7 +54,7 @@ const Modal = ({
       className={className}
       css={css`
         position: fixed;
-        z-index: 2000;
+        z-index: 3000;
         top: 0;
         bottom: 0;
         left: 0;

@@ -4,7 +4,10 @@ import Button from "wombat/src/components/button/Button";
 import Card from "wombat/src/components/card/Card";
 import Chip from "wombat/src/components/chip/Chip";
 import Divider from "wombat/src/components/divider/Divider";
+import Icon from "wombat/src/components/icon/Icon";
 import Loader from "wombat/src/components/loader/Loader";
+
+import { Clock } from 'react-feather';
 
 <Meta title="Wombat Common" />
 
@@ -27,6 +30,20 @@ import Loader from "wombat/src/components/loader/Loader";
 
 <section className="s">
   <Button fluid>Button</Button>
+</section>
+
+<section className="s">
+  <Icon size='small'>
+    <Clock />
+  </Icon>
+
+  <Icon>
+    <Clock />
+  </Icon>
+
+  <Icon size='big'>
+    <Clock />
+  </Icon>
 </section>
 
 <section className="s">

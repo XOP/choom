@@ -1,0 +1,189 @@
+import { Meta } from '@storybook/addon-docs';
+
+import Flex from "wombat/src/components/layout/Flex";
+import Flow from "wombat/src/components/layout/Flow";
+import Media from "wombat/src/components/layout/Media";
+import Hold from "wombat/src/components/layout/Hold";
+import Stack from "wombat/src/components/layout/Stack";
+import FlexUnit from "wombat/src/components/layout/FlexUnit";
+
+<Meta title="Wombat Layout" />
+
+<style>{`
+  section.s {
+    padding: 2rem;
+    margin: 1rem 0 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+
+  section.c {
+    height: 20rem;
+    border: 1px dashed #ccc;
+    border-radius: 0.25rem;
+  }
+
+  div.x {
+    padding: 1.5rem 3rem;
+    background: #666;
+    color: #fff;
+    border-radius: 0.25rem;
+  }
+
+  h2 { 
+    border: none !important;
+   }
+`}</style>
+
+# Wombat Layout
+
+
+## Flex
+
+<section className="s">
+  <p>flex / 1 item</p>
+  <Flex>
+    <div className='x'>item</div>
+  </Flex>
+
+  <p>flex / 3 items</p>
+  <Flex>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+  </Flex>
+
+  <p>flex / spacing</p>
+  <Flex space='0.5'>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+  </Flex>
+
+  <p>flex / justify start </p>
+  <Flex justify='start'>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+  </Flex>
+
+  <p>flex / justify space-between </p>
+  <Flex justify='space-between'>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+  </Flex>
+</section>
+
+
+## Flow
+
+<section className="s">
+  <p>flow / nowrap</p>
+  <Flow justify='start'>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+  </Flow>
+
+  <p>flow / wrap</p>
+  <Flow justify='start' wrap>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+  </Flow>
+</section>
+
+
+## Media
+
+<section className="s">
+  <p>media / 2 items</p>
+  <Media
+    start={<div className='x'>item start</div>}
+  >
+    <div className='x'>item main content</div>
+  </Media>
+
+  <p>media / 3 items</p>
+  <Media
+    start={<div className='x'>item start</div>}
+    end={<div className='x'>item end</div>}
+  >
+    <div className='x'>item main content</div>
+  </Media>
+
+  <p>media / spacing</p>
+  <Media
+    start={<div className='x'>item start</div>}
+    end={<div className='x'>item end</div>}
+    space='0.5'
+  >
+    <div className='x'>item main content</div>
+  </Media>
+</section>
+
+
+## Hold
+
+<section className="s">
+  <p>hold</p>
+  <section className="c">
+    <Hold>
+      <div className='x'>item to hold</div>
+    </Hold>
+  </section>
+
+  <p>hold / justify start</p>
+  <section className="c">
+    <Hold justify='start'>
+      <div className='x'>item to hold</div>
+    </Hold>
+  </section>
+
+  <p>hold / align end</p>
+  <section className="c">
+    <Hold align='end'>
+      <div className='x'>item to hold</div>
+    </Hold>
+  </section>
+</section>
+
+
+## Stack
+
+<section className="s">
+  <p>stack</p>
+  <Stack>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+  </Stack>
+
+  <p>stack / spacing</p>
+  <Stack space='0.5'>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+    <div className='x'>item</div>
+  </Stack>
+
+  <p>stack / dir x</p>
+  <Stack dir='x'>
+    <div className='x' style={{ display: 'inline-block' }}>item</div>
+    <div className='x' style={{ display: 'inline-block' }}>item</div>
+    <div className='x' style={{ display: 'inline-block' }}>item</div>
+  </Stack>
+
+  <p>stack / dir xy</p>
+  <Stack dir='xy'>
+    <div className='x' style={{ display: 'inline-block' }}>item</div>
+    <div className='x' style={{ display: 'inline-block' }}>item</div>
+    <div className='x' style={{ display: 'inline-block' }}>item</div>
+    <div className='x' style={{ display: 'inline-block' }}>item</div>
+    <div className='x' style={{ display: 'inline-block' }}>item</div>
+  </Stack>
+</section>

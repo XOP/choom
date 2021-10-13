@@ -3,17 +3,18 @@ import PropTypes from "prop-types";
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
+import { Image } from "react-feather";
+
+import Icon from "../icon/Icon";
+import Hold from "../layout/Hold";
 
 import theme, { ASPECT_RATIO_TYPES, IMG_FIT_TYPES } from "../../theme/theme";
 
 const getUnit = (strValue) => strValue.match(/[a-z, %]+$/)[0] || "";
 const parseAspectRatio = (strValue) => {
-  const [wx, hx] = strValue.split(':');
+  const [wx, hx] = strValue.split(":");
 
-  return [
-    Number(wx),
-    Number(hx)
-  ]
+  return [Number(wx), Number(hx)];
 };
 
 const Picture = ({
@@ -70,15 +71,30 @@ const Picture = ({
         user-select: none;
       `}
     >
-      <img
-        alt={alt}
-        css={css`
-          object-fit: ${fill};
-          max-width: 100%;
-          max-height: 100%;
-        `}
-        src={src}
-      />
+      {!!src ? (
+        <img
+          alt={alt}
+          css={css`
+            object-fit: ${fill};
+            width: 100%;
+            height: 100%;
+          `}
+          src={src}
+        />
+      ) : (
+        <Hold>
+          <span
+            css={css`
+            opacity: 0.25;
+            color" ${theme.colorDarkTemp};
+          `}
+          >
+            <Icon>
+              <Image />
+            </Icon>
+          </span>
+        </Hold>
+      )}
     </figure>
   );
 };

@@ -50,6 +50,12 @@ export const MAP_SPACE = {
   4: theme.spaceFour,
 };
 
+export const MAP_ICONS = {
+  small: theme.spaceOne,
+  regular: theme.spaceOneAndHalf,
+  big: theme.spaceTwo,
+};
+
 export const SPACE_TYPES = [
   "0",
   "0.25",
@@ -90,6 +96,8 @@ export const INPUT_TYPES = [
 
 export const SIZES_TYPES = ["regular", "small", "big"];
 
+export const ICON_SIZES_TYPES = ["inherit", ...SIZES_TYPES];
+
 export const DISPLAY_TYPES = [
   "block",
   "inline",
@@ -109,6 +117,8 @@ export const POSITION_TYPES = [
   "initial",
 ];
 
+export const DIRECTION_TYPES = ["x", "y", "xy"];
+
 export const PLACEMENT_Y_TYPES = ["top", "bottom"];
 
 export const PLACEMENT_X_TYPES = ["left", "right"];
@@ -127,3 +137,42 @@ export const ASPECT_RATIO_TYPES = [
 ];
 
 export const IMG_FIT_TYPES = ["fill", "cover", "contain", "initial"];
+
+export const FLEX_ALIGN_TYPES = [
+  "start",
+  "center",
+  "end",
+  "baseline",
+  "stretch",
+];
+
+export const FLEX_ALIGNSELF_TYPES = [
+  "start",
+  "center",
+  "end",
+  "auto",
+  "baseline",
+  "stretch",
+];
+
+export const FLEX_JUSTIFY_TYPES = [
+  "start",
+  "center",
+  "end",
+  "space-between",
+  "space-around",
+];
+
+export const FLEX_SIZE_TYPES = [
+  0,
+  1,
+  2,
+  3,
+  4,
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "initial",
+];

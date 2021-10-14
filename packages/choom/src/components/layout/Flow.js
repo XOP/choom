@@ -27,11 +27,11 @@ const Flow = ({
             align={align}
             justify={justify}
             space={space}
+            wrap={wrap}
             className={cx(
               className,
               css`
                 flex-direction: row;
-                flex-wrap: ${wrap ? "wrap" : "nowrap"};
               `
             )}
           >

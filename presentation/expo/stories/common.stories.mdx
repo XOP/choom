@@ -14,13 +14,20 @@ import { Clock } from 'react-feather';
 <style>{`
   section.s {
     padding: 2rem;
-    margin: 2rem 0;
+    margin: 1rem 0 2rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
   }
+
+  h2 { 
+    border: none !important;
+   }
 `}</style>
 
 # Choom common
+
+
+## Button
 
 <section className="s">
   <Button size='big'>Button</Button>
@@ -31,6 +38,9 @@ import { Clock } from 'react-feather';
 <section className="s">
   <Button fluid>Button</Button>
 </section>
+
+
+## Icon
 
 <section className="s">
   <Icon size='small'>
@@ -46,6 +56,9 @@ import { Clock } from 'react-feather';
   </Icon>
 </section>
 
+
+## Loader
+
 <section className="s">
   <Loader  />
   <Divider mt='2' mb='2' />
@@ -54,11 +67,17 @@ import { Clock } from 'react-feather';
   <Loader size='big' display='inline-block' />
 </section>
 
+
+## Chip
+
 <section className="s">
   <Chip>Chip</Chip>
   <Chip onClick={() => console.log('Chip onClick')}>Chip with onClick</Chip>
   <Chip>Chip with a taaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaail</Chip>
 </section>
+
+
+## Card
 
 <section className="s">
   <Card>Card with Divider at the bottom</Card>

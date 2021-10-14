@@ -1,19 +1,27 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, ClassNames } from "@emotion/react";
 
-import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES, MAP_SPACE, SPACE_TYPES } from "../../theme/theme";
+import {
+  FLEX_ALIGN_TYPES,
+  FLEX_DIR_TYPES,
+  FLEX_JUSTIFY_TYPES,
+  MAP_SPACE,
+  SPACE_TYPES,
+} from "../../theme/theme";
 
 const Flex = ({
   className,
   children,
   as = "div",
+  dir = "row",
   align = "center",
   justify = "center",
-  space = '1'
+  wrap = false,
+  space = "1",
 }) => {
   const gapVal = MAP_SPACE[String(space)];
 
@@ -30,6 +38,8 @@ const Flex = ({
                 display: flex;
                 align-content: ${align};
                 justify-content: ${justify};
+                flex-wrap: ${wrap ? "wrap" : "nowrap"};
+                flex-direction: ${dir};
                 gap: ${gapVal};
               `
             ),
@@ -45,9 +55,10 @@ Flex.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   as: PropTypes.string,
+  dir: PropTypes.oneOf(FLEX_DIR_TYPES),
   align: PropTypes.oneOf(FLEX_ALIGN_TYPES),
   justify: PropTypes.oneOf(FLEX_JUSTIFY_TYPES),
-  space: PropTypes.oneOf(SPACE_TYPES)
+  space: PropTypes.oneOf(SPACE_TYPES),
 };
 
 export default Flex;

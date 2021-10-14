@@ -1,0 +1,121 @@
+import { Meta } from '@storybook/addon-docs';
+
+import Flex from "choom/src/components/layout/Flex";
+import Flow from "choom/src/components/layout/Flow";
+import Media from "choom/src/components/layout/Media";
+import Hold from "choom/src/components/layout/Hold";
+import Support from "choom/src/components/layout/Support";
+import Stack from "choom/src/components/layout/Stack";
+import FlexUnit from "choom/src/components/layout/FlexUnit";
+
+<Meta title="Choom Layout Extra" />
+
+<style>{`
+  section.s {
+    padding: 2rem;
+    margin: 1rem 0 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+
+  section.c {
+    height: 20rem;
+    border: 1px dashed #ccc;
+    border-radius: 0.25rem;
+  }
+
+  div.x {
+    padding: 1.5rem 3rem;
+    background: #666;
+    color: #fff;
+    border-radius: 0.25rem;
+  }
+
+  h2 { 
+    border: none !important;
+   }
+
+  .flex {
+    height: 20rem;
+    border: 1px dashed #ccc;
+    border-radius: 0.25rem;
+  }
+`}</style>
+
+# Choom Layout Extra
+
+
+## Hold
+
+<section className="s">
+  <p>hold</p>
+  <Flex className='flex'>
+    <Hold>
+      <div className='x'>item to hold</div>
+    </Hold>
+  </Flex>
+
+  <p>hold / justify start</p>
+  <Flex className='flex'>
+    <Hold justify='start'>
+      <div className='x'>item to hold</div>
+    </Hold>
+  </Flex>
+
+  <p>hold / align end</p>
+  <Flex className='flex'>
+    <Hold align='end'>
+      <div className='x'>item to hold</div>
+    </Hold>
+  </Flex>
+</section>
+
+
+## Support
+
+<section className="s">
+  <p>support / 2 items</p>
+  <Flex className='flex'>
+    <Support justify='start'>
+      <div className='x'>item to support</div>
+      <FlexUnit />
+      <div className='x'>item to support</div>
+    </Support>
+  </Flex>
+
+  <p>support / 1 item</p>
+  <Flex className='flex'>
+    <Support justify='start'>
+      <div className='x'>item to support</div>
+      <FlexUnit />
+    </Support>
+  </Flex>
+
+  <p>support / 1 item</p>
+  <Flex className='flex'>
+    <Support justify='start'>
+      <FlexUnit />
+      <div className='x'>item to support</div>
+    </Support>
+  </Flex>
+</section>
+
+
+## Combination
+
+<section className="s">
+
+  <p>support + hold</p>
+  <Flex className='flex'>
+    <Support justify='start'>
+      <div className='x'>item to support</div>
+      <FlexUnit>
+        <Hold>
+          <div className='x'>item to hold</div>
+        </Hold>
+      </FlexUnit>
+      <div className='x'>item to support</div>
+    </Support>
+  </Flex>
+
+</section>

@@ -16,4 +16,5 @@ export { default as FlexUnit } from "./layout/FlexUnit";
 export { default as Flow } from "./layout/Flow";
 export { default as Hold } from "./layout/Hold";
 export { default as Media } from "./layout/Media";
+export { default as Support } from "./layout/Support";
 export { default as Stack } from "./layout/Stack";

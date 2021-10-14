@@ -7,13 +7,20 @@ import Picture from "choom/src/components/picture/Picture";
 <style>{`
   section.s {
     padding: 2rem;
-    margin: 2rem 0;
+    margin: 1rem 0 2rem;
     border: 1px solid #ccc;
     border-radius: 0.25rem;
   }
+
+  h2 { 
+    border: none !important;
+   }
 `}</style>
 
 # Choom Picture
+
+
+## Width and Height
 
 <section className="s">
   <p>auto width and height</p>
@@ -26,10 +33,16 @@ import Picture from "choom/src/components/picture/Picture";
   <Picture src='http://placehold.it/200x100' width='100px' height='auto' />
 </section>
 
+
+## Placeholder
+
 <section className="s">
   <p>placeholder</p>
   <Picture src='' width='150px' height='200px' />
 </section>
+
+
+## Aspect Ratio
 
 <section className="s">
   <p>4:3 auto width</p>
@@ -38,6 +51,9 @@ import Picture from "choom/src/components/picture/Picture";
   <p>4:3 auto height</p>
   <Picture src='http://placehold.it/200x100' width='200px' height='auto' aspectRatio='4:3' />
 </section>
+
+
+## Fill
 
 <section className="s">
   <p>4:3 auto width contain</p>

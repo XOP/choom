@@ -7,7 +7,7 @@ import Hold from "choom/src/components/layout/Hold";
 import Stack from "choom/src/components/layout/Stack";
 import FlexUnit from "choom/src/components/layout/FlexUnit";
 
-<Meta title="Choom Layout" />
+<Meta title="Choom Layout Basic" />
 
 <style>{`
   section.s {
@@ -35,7 +35,7 @@ import FlexUnit from "choom/src/components/layout/FlexUnit";
    }
 `}</style>
 
-# Choom Layout
+# Choom Layout Basic
 
 
 ## Flex
@@ -125,32 +125,21 @@ import FlexUnit from "choom/src/components/layout/FlexUnit";
   >
     <div className='x'>item main content</div>
   </Media>
-</section>
 
+  <p>media / align top</p>
+  <Media
+    start={<div className='x' style={{ padding: '1rem' }}>item start</div>}
+  >
+    <div className='x'>item main content</div>
+  </Media>
 
-## Hold
-
-<section className="s">
-  <p>hold</p>
-  <section className="c">
-    <Hold>
-      <div className='x'>item to hold</div>
-    </Hold>
-  </section>
-
-  <p>hold / justify start</p>
-  <section className="c">
-    <Hold justify='start'>
-      <div className='x'>item to hold</div>
-    </Hold>
-  </section>
-
-  <p>hold / align end</p>
-  <section className="c">
-    <Hold align='end'>
-      <div className='x'>item to hold</div>
-    </Hold>
-  </section>
+  <p>media / align center</p>
+  <Media
+    start={<div className='x' style={{ padding: '1rem' }}>item start</div>}
+    align='center'
+  >
+    <div className='x'>item main content</div>
+  </Media>
 </section>
 
 

@@ -7,6 +7,7 @@ import { jsx, ClassNames } from "@emotion/react";
 
 import {
   FLEX_ALIGNSELF_TYPES,
+  FLEX_JUSTIFY_TYPES,
   FLEX_SIZE_TYPES,
   MAP_SPACE,
   SPACE_TYPES,
@@ -16,7 +17,9 @@ const FlexUnit = ({
   className,
   children,
   as = "div",
+  fluid = false,
   align = "center",
+  justify = "center",
   grow = 1,
   shrink = 1,
   basis = "auto",
@@ -41,9 +44,11 @@ const FlexUnit = ({
               css`
                 box-sizing: border-box;
                 align-self: ${align};
+                justify-self: ${justify};
                 flex-grow: ${grow};
                 flex-shrink: ${shrink};
                 flex-basis: ${basis};
+                width: ${fluid ? '100%' : 'auto'};
                 margin-top: ${spaceT};
                 margin-bottom: ${spaceB};
                 margin-left: ${spaceL};
@@ -60,9 +65,11 @@ const FlexUnit = ({
 
 FlexUnit.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   as: PropTypes.string,
+  fluid: PropTypes.bool,
   align: PropTypes.oneOf(FLEX_ALIGNSELF_TYPES),
+  justify: PropTypes.oneOf(FLEX_JUSTIFY_TYPES),
   grow: PropTypes.oneOf(FLEX_SIZE_TYPES),
   shrink: PropTypes.oneOf(FLEX_SIZE_TYPES),
   basis: PropTypes.string,

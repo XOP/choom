@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { jsx, css, ClassNames } from "@emotion/react";
 
-import theme, {
+import {
   DIRECTION_TYPES,
   MAP_SPACE,
   SPACE_TYPES,

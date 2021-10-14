@@ -138,6 +138,11 @@ export const ASPECT_RATIO_TYPES = [
 
 export const IMG_FIT_TYPES = ["fill", "cover", "contain", "initial"];
 
+export const FLEX_DIR_TYPES = [
+  "row",
+  "column",
+];
+
 export const FLEX_ALIGN_TYPES = [
   "start",
   "center",

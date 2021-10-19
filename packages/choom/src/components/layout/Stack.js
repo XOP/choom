@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { jsx, css, ClassNames } from "@emotion/react";
 
 import {
-  DIRECTION_TYPES,
+  DIRECTION_XY_TYPES,
   MAP_SPACE,
   SPACE_TYPES,
 } from "../../theme/theme";
@@ -41,8 +41,14 @@ const Stack = ({ className, children, as = "div", dir = "y", space = "1" }) => {
             ),
           },
           <div css={css`
-            margin-top: calc(-1 * ${marginT});
-            margin-left: calc(-1 * ${marginL});
+            ${
+              marginT !== 0 && 
+              `margin-top: calc(-1 * ${marginT});`
+            }
+            ${
+              marginL !== 0 &&
+              `margin-left: calc(-1 * ${marginL});`
+            }
 
             /* extra specificity over descendants */
             && > * {
@@ -60,7 +66,7 @@ Stack.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   as: PropTypes.string,
-  dir: PropTypes.oneOf(DIRECTION_TYPES),
+  dir: PropTypes.oneOf(DIRECTION_XY_TYPES),
   space: PropTypes.oneOf(SPACE_TYPES),
 };
 

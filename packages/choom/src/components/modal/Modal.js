@@ -11,7 +11,8 @@ import theme from "../../theme/theme";
 
 import { Button, Heading } from "..";
 
-const modalRoot = document.getElementById("choom-modal");
+const modalRoot =
+  typeof window === "undefined" ? null : document.getElementById("choom-modal");
 
 const Modal = ({
   className,
@@ -20,6 +21,8 @@ const Modal = ({
   onClose = () => null,
   isOpen = false,
 }) => {
+  if (!modalRoot) return;
+
   const [open, setOpen] = useState(isOpen);
 
   const handleClose = () => {

@@ -11,6 +11,7 @@ export { default as Picture } from "./picture/Picture";
 export { default as Space } from "./space/Space";
 export { default as Switch } from "./switch/Switch";
 
+export { default as Contain } from "./layout/Contain";
 export { default as Flex } from "./layout/Flex";
 export { default as FlexUnit } from "./layout/FlexUnit";
 export { default as Flow } from "./layout/Flow";

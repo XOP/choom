@@ -13,11 +13,16 @@ const Icon = ({ className, children, title = "", size = "regular" }) => {
     sizeVal = MAP_ICONS[size];
   }
 
+  if (sizeVal === 'inherit') {
+    sizeVal = '1.125em';
+  }
+
   return (
     <span
       className={className}
       css={css`
         display: inline-flex;
+        vertical-align: text-top;
         box-sizing: border-box;
         height: ${sizeVal};
         width: ${sizeVal};

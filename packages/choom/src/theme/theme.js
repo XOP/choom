@@ -117,12 +117,15 @@ export const POSITION_TYPES = [
   "initial",
 ];
 
-export const DIRECTION_TYPES = ["x", "y", "xy"];
+export const DIRECTION_XY_TYPES = ["x", "y", "xy"];
+export const DIRECTION_SIDES_TYPES = ["top", "bottom", "left", "right"];
+export const DIRECTION_TYPES = [
+  ...DIRECTION_XY_TYPES,
+  ...DIRECTION_SIDES_TYPES,
+];
 
 export const PLACEMENT_Y_TYPES = ["top", "bottom"];
-
 export const PLACEMENT_X_TYPES = ["left", "right"];
-
 export const PLACEMENT_TYPES = [...PLACEMENT_Y_TYPES, ...PLACEMENT_X_TYPES];
 
 export const ASPECT_RATIO_TYPES = [
@@ -138,10 +141,7 @@ export const ASPECT_RATIO_TYPES = [
 
 export const IMG_FIT_TYPES = ["fill", "cover", "contain", "initial"];
 
-export const FLEX_DIR_TYPES = [
-  "row",
-  "column",
-];
+export const FLEX_DIR_TYPES = ["row", "column"];
 
 export const FLEX_ALIGN_TYPES = [
   "start",

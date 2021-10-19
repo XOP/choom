@@ -3,7 +3,7 @@ const path = require('path');
 
 const theme_path = path.join(__dirname, '../src/theme');
 
-const data = fs.readFileSync(path.join(theme_path, 'theme.module.css'), 'utf-8');
+const data = fs.readFileSync(path.join(theme_path, 'theme.css'), 'utf-8');
 
 // targets "--space-half: 0.5rem;"
 const tokens = data.match(/--[a-z, 0-9, -]+:\s.+;/gi);

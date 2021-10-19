@@ -9,6 +9,11 @@ Choom is built with the following concepts:
 - theming is opinionated, yet extensively and easily configurable
 - component API is a predictable facade, shared in similar entities
 
+## DISCLAIMER 
+
+Choom is growing and maturing as you are reading these notes.  
+Current version is not stable and most probably **will not** be compatible with the next update.  
+Prior to version `1.0.0` it is not recommended to use in anything more complex than an exercise/test/prototype app.
 
 ## Installation
 
@@ -23,7 +28,7 @@ yarn add choom
 In the index.js of your App (or other suitable location) import the theme CSS:
 
 ```js
-import "choom/lib/theme/theme.module.css";
+import "choom/lib/theme/theme.css";
 ```
 
 

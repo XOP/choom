@@ -46,7 +46,12 @@ const Button = ({
         box-sizing: border-box;
         height: calc(${paddingY} * 2 + ${fontSize} * ${theme.lineHeightN} + 2 * ${theme.borderSizeRegular});
         padding: ${paddingY} ${paddingX};
-        width: ${fluid ? '100%' : 'auto'};
+        width: ${fluid ? 
+          '100%' : 
+          (isIcon ? 
+            `calc(${paddingX} * 2 + ${fontSize} * ${theme.lineHeightN} + 2 * ${theme.borderSizeRegular})` : 
+            'auto'
+          )};
 
         border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
         border-radius: ${theme.radiusRegular};

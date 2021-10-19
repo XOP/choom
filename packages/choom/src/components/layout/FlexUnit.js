@@ -18,6 +18,7 @@ const FlexUnit = ({
   children,
   as = "div",
   fluid = false,
+  stretch = false,
   align = "center",
   justify = "center",
   grow = 1,
@@ -49,6 +50,7 @@ const FlexUnit = ({
                 flex-shrink: ${shrink};
                 flex-basis: ${basis};
                 width: ${fluid ? '100%' : 'auto'};
+                height: ${stretch ? '100%' : 'auto'};
                 margin-top: ${spaceT};
                 margin-bottom: ${spaceB};
                 margin-left: ${spaceL};
@@ -68,6 +70,7 @@ FlexUnit.propTypes = {
   children: PropTypes.node,
   as: PropTypes.string,
   fluid: PropTypes.bool,
+  stretch: PropTypes.bool,
   align: PropTypes.oneOf(FLEX_ALIGNSELF_TYPES),
   justify: PropTypes.oneOf(FLEX_JUSTIFY_TYPES),
   grow: PropTypes.oneOf(FLEX_SIZE_TYPES),

@@ -16,6 +16,8 @@ import {
 const Flex = ({
   className,
   children,
+  fluid = false,
+  stretch = false,
   as = "div",
   dir = "row",
   align = "center",
@@ -40,6 +42,8 @@ const Flex = ({
                 justify-content: ${justify};
                 flex-wrap: ${wrap ? "wrap" : "nowrap"};
                 flex-direction: ${dir};
+                width: ${fluid ? '100%' : 'auto'};
+                height: ${stretch ? '100%' : 'auto'};
                 gap: ${gapVal};
               `
             ),
@@ -55,6 +59,8 @@ Flex.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   as: PropTypes.string,
+  fluid: PropTypes.bool,
+  stretch: PropTypes.bool,
   dir: PropTypes.oneOf(FLEX_DIR_TYPES),
   align: PropTypes.oneOf(FLEX_ALIGN_TYPES),
   justify: PropTypes.oneOf(FLEX_JUSTIFY_TYPES),

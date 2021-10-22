@@ -15,6 +15,7 @@ const Divider = ({ className, mt = "1", mb = "1" }) => {
       className={className}
       css={css`
         box-sizing: border-box;
+        width: 100%;
         height: ${theme.borderSizeRegular};
         border: 0 none;
         margin-top: ${spaceTop};

@@ -44,14 +44,16 @@ const Button = ({
         appearance: none;
 
         box-sizing: border-box;
-        height: calc(${paddingY} * 2 + ${fontSize} * ${theme.lineHeightN} + 2 * ${theme.borderSizeRegular});
+        height: calc(
+          ${paddingY} * 2 + ${fontSize} * ${theme.lineHeightN} + 2 *
+            ${theme.borderSizeRegular}
+        );
         padding: ${paddingY} ${paddingX};
-        width: ${fluid ? 
-          '100%' : 
-          (isIcon ? 
-            `calc(${paddingX} * 2 + ${fontSize} * ${theme.lineHeightN} + 2 * ${theme.borderSizeRegular})` : 
-            'auto'
-          )};
+        width: ${fluid
+          ? "100%"
+          : isIcon
+          ? `calc(${paddingX} * 2 + ${fontSize} * ${theme.lineHeightN} + 2 * ${theme.borderSizeRegular})`
+          : "auto"};
 
         border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
         border-radius: ${theme.radiusRegular};
@@ -104,7 +106,13 @@ const Button = ({
           {iconStart}
         </span>
       )}
-      <span>{children}</span>
+      <span
+        css={css`
+          ${isIcon && `vertical-align: text-top;`}
+        `}
+      >
+        {children}
+      </span>
       {iconEnd && (
         <span
           css={css`
@@ -131,7 +139,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(SIZES_TYPES),
   fluid: PropTypes.bool,
   isIcon: PropTypes.bool,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 export default Button;

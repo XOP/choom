@@ -22,7 +22,6 @@ const Icon = ({ className, children, title = "", size = "regular" }) => {
       className={className}
       css={css`
         display: inline-flex;
-        vertical-align: text-top;
         box-sizing: border-box;
         height: ${sizeVal};
         width: ${sizeVal};

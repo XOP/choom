@@ -33,7 +33,7 @@
     "url": "git+https://github.com/XOP/choom.git"
   },
   "author": "XOP",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "homepage": "https://github.com/XOP/choom#readme",
   "dependencies": {
     "@emotion/react": "^11.0.0",

@@ -8,8 +8,8 @@ import theme from "../../theme/theme";
 
 const Chip = ({ className, children, title = "", onClick }) => {
   const heightEx = `${theme.fontSizeM} * ${theme.lineHeightS} + 2 * ${theme.spaceHalf} + 2 * ${theme.borderSizeRegular}`;
-  
-  const interactive = onClick && typeof onClick === 'function';
+
+  const interactive = onClick && typeof onClick === "function";
 
   return (
     <span
@@ -35,20 +35,21 @@ const Chip = ({ className, children, title = "", onClick }) => {
         cursor: default;
         user-select: none;
 
-        @media (hover: hover) {
-          &:hover {
-            filter: brightness(1.2);
+        ${interactive &&
+        `
+          @media (hover: hover) {
+            &:hover {
+              cursor: pointer;
+              filter: brightness(1.2);
+            }
           }
-        }
-        
-        ${
-          interactive ? 
-          `&:active {
+
+          &:active {
             filter: contrast(0.8);
             transform: translateY(1px);
-          }` : ''
-        }
-        
+          }
+          `}
+
         &:nth-of-type(n + 2) {
           margin-left: ${theme.spaceHalf};
         }

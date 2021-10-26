@@ -71,7 +71,7 @@ const Button = ({
         user-select: none;
 
         @media (hover: hover) {
-          &:hover {
+          &:hover:not([disabled]) {
             filter: brightness(1.2);
           }
         }

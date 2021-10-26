@@ -9,7 +9,7 @@ import { css, jsx } from "@emotion/react";
 
 import theme from "../../theme/theme";
 
-import { Button, Heading } from "..";
+import { Button, Heading, Icon } from "..";
 
 const modalRoot =
   typeof window === "undefined" ? null : document.getElementById("choom-modal");
@@ -80,7 +80,9 @@ const Modal = ({
         `}
       >
         <Button size="small" isIcon onClick={handleClose}>
-          <IconX />
+          <Icon size="inherit">
+            <IconX />
+          </Icon>
         </Button>
       </div>
 

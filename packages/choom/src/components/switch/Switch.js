@@ -37,9 +37,7 @@ const Switch = ({
         height: ${theme.spaceOneAndHalf};
         width: ${theme.spaceFour};
         top: ${theme.spaceHalf};
-        margin-top: calc(
-          -1 * ${theme.spaceQuarter} - 2 * ${theme.borderSizeLight}
-        );
+        margin-top: calc(-1 * ${theme.spaceQuarter});
 
         border: ${theme.borderSizeLight} solid ${theme.colorDarkTemp};
         border-radius: ${theme.spaceOne};
@@ -50,19 +48,29 @@ const Switch = ({
         cursor: pointer;
         transition: all 0.15s;
 
-        @media (hover: hover) {
-          &:hover {
-            filter: brightness(1.2);
+        ${
+          !disabled &&
+          `
+          @media (hover: hover) {
+            &:hover {
+              filter: brightness(1.2);
+            }
           }
+
+          &:active:not([disabled]) {
+            transform: scale(0.925);
+          }
+          `
         }
 
-        &:active:not([disabled]) {
-          transform: scale(0.925);
-        }
-
-        &[disabled] {
+        ${
+          disabled &&
+          `
           cursor: default;
           opacity: 0.5;
+          `
+        }
+          
         }
       `}
       htmlFor={_id.current}
@@ -113,7 +121,7 @@ Switch.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
 };
 
 export default Switch;

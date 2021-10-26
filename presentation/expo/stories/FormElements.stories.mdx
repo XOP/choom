@@ -1,0 +1,46 @@
+import { Meta } from "@storybook/addon-docs";
+
+import Switch from "choom/src/components/switch/Switch";
+import Numeric from "choom/src/components/numeric/Numeric";
+
+<Meta title="Choom Form Elements" />
+
+<style>{`
+  section.s {
+    padding: 2rem;
+    margin: 1rem 0 2rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+
+  h2 { 
+    border: none !important;
+   }
+`}</style>
+
+# Choom common
+
+## Switch
+
+<section className="s">
+  <p>
+    from this <Switch /> to that
+  </p>
+  <p>
+    where <Switch checked /> that is checked
+  </p>
+  <p>
+    and this <Switch disabled /> is disabled
+  </p>
+</section>
+
+
+## Numeric
+
+<section className="s">
+  <Numeric value={42} />
+</section>
+
+<section className="s">
+  <Numeric value={42} disabled />
+</section>

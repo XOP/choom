@@ -150,6 +150,9 @@ Numeric.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   value: PropTypes.number,
+  min: PropTypes.number,
+  max: PropTypes.number,
+  step: PropTypes.number,
   onChange: PropTypes.func,
 };
 

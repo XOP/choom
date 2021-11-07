@@ -8,6 +8,8 @@ export { default as Loader } from "./loader/Loader";
 export { default as Modal } from "./modal/Modal";
 export { default as Panel } from "./panel/Panel";
 export { default as Picture } from "./picture/Picture";
+export { default as Select } from "./select/Select";
+export { default as SelectOption } from "./select/SelectOption";
 export { default as Space } from "./space/Space";
 export { default as Switch } from "./switch/Switch";
 

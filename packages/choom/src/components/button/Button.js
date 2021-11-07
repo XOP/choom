@@ -62,6 +62,7 @@ const Button = ({
         color: ${theme.colorDarkTemp};
 
         text-transform: uppercase;
+        white-space: nowrap;
         font-family: ${theme.fontFamily};
         font-size: ${fontSize};
         line-height: ${theme.lineHeightN};

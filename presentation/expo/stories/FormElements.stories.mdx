@@ -1,5 +1,7 @@
 import { Meta } from "@storybook/addon-docs";
 
+import Select from "choom/src/components/select/Select";
+import SelectOption from "choom/src/components/select/SelectOption";
 import Switch from "choom/src/components/switch/Switch";
 import Numeric from "choom/src/components/numeric/Numeric";
 
@@ -19,6 +21,41 @@ import Numeric from "choom/src/components/numeric/Numeric";
 `}</style>
 
 # Choom common
+
+## Select
+
+<section className="s">
+  <Select size="small" value="two" onChange={(val) => console.log(val)}>
+    <SelectOption value="one">Option One</SelectOption>
+    <SelectOption value="two">Option Two</SelectOption>
+    <SelectOption value="three" disabled>Another Option</SelectOption>
+  </Select>
+
+  <br />
+
+  <Select size="regular" value="two" onChange={(val) => console.log(val)}>
+    <SelectOption value="one">Option One</SelectOption>
+    <SelectOption value="two">Option Two</SelectOption>
+    <SelectOption value="three" disabled>Another Option</SelectOption>
+  </Select>
+
+  <br />
+
+  <Select size="big" value="two" onChange={(val) => console.log(val)}>
+    <SelectOption value="one">Option One</SelectOption>
+    <SelectOption value="two">Option Two</SelectOption>
+    <SelectOption value="three" disabled>Another Option</SelectOption>
+  </Select>
+</section>
+
+<section className="s">
+  <Select value="two" disabled>
+    <SelectOption value="one">Option One</SelectOption>
+    <SelectOption value="two">Option Two</SelectOption>
+    <SelectOption value="three" disabled>Another Option</SelectOption>
+  </Select>
+</section>
+
 
 ## Switch
 

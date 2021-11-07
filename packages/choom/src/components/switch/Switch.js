@@ -11,6 +11,7 @@ import theme from "../../theme/theme";
 
 const Switch = ({
   className,
+  name,
   disabled = false,
   checked = false,
   onChange = () => null,
@@ -78,6 +79,7 @@ const Switch = ({
       <input
         id={_id.current}
         className={className}
+        name={name}
         css={css`
           width: 0;
           height: 0;
@@ -119,6 +121,7 @@ const Switch = ({
 
 Switch.propTypes = {
   className: PropTypes.string,
+  name: PropTypes.string,
   disabled: PropTypes.bool,
   checked: PropTypes.bool,
   onChange: PropTypes.func,

@@ -4,16 +4,28 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import { DISPLAY_TYPES, MAP_SPACE, SPACE_TYPES } from "../../theme/theme";
+import {
+  DIRECTION_TYPES,
+  DIRECTION_XY_TYPES,
+  DISPLAY_TYPES,
+  MAP_SPACE,
+  SPACE_TYPES,
+} from "../../theme/theme";
 
-const Space = ({ className, size = "1", display = "block", isBox = true }) => {
+const Space = ({
+  className,
+  size = "1",
+  display = "block",
+  dir = "y",
+  isBox = true,
+}) => {
   const _size = MAP_SPACE[String(size)];
 
   let margin = 0;
-  let height = 0;
+  let dim = 0;
 
   if (isBox) {
-    height = _size;
+    dim = _size;
   } else {
     margin = `calc(${_size} / 2)`;
   }
@@ -23,9 +35,18 @@ const Space = ({ className, size = "1", display = "block", isBox = true }) => {
       className={className}
       css={css`
         display: ${display};
-        height: ${height};
-        margin-top: ${margin};
-        margin-bottom: ${margin};
+
+        ${dir === "y"
+          ? `
+          height: ${dim};
+          margin-top: ${margin};
+          margin-bottom: ${margin};
+        `
+          : `
+          width: ${dim};
+          margin-left: ${margin};
+          margin-right: ${margin};
+        `}
       `}
     ></div>
   );
@@ -34,6 +55,7 @@ const Space = ({ className, size = "1", display = "block", isBox = true }) => {
 Space.propTypes = {
   className: PropTypes.string,
   display: PropTypes.oneOf(DISPLAY_TYPES),
+  dir: PropTypes.oneOf(DIRECTION_XY_TYPES),
   size: PropTypes.oneOf(SPACE_TYPES),
   isBox: PropTypes.bool,
 };

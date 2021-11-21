@@ -7,6 +7,8 @@ import Hold from "choom/src/components/layout/Hold";
 import Stack from "choom/src/components/layout/Stack";
 import FlexUnit from "choom/src/components/layout/FlexUnit";
 
+import Space from "choom/src/components/space/Space";
+
 <Meta title="Choom Layout Basic" />
 
 <style>{`
@@ -23,11 +25,16 @@ import FlexUnit from "choom/src/components/layout/FlexUnit";
     border-radius: 0.25rem;
   }
 
+  span.x,
   div.x {
     padding: 1.5rem 3rem;
     background: #666;
     color: #fff;
     border-radius: 0.25rem;
+  }
+
+  span.x {
+    display: inline-flex;
   }
 
   h2 { 
@@ -36,6 +43,26 @@ import FlexUnit from "choom/src/components/layout/FlexUnit";
 `}</style>
 
 # Choom Layout Basic
+
+
+## Space
+
+<section className="s">
+  <p>space / vertical</p>
+  <div className='x'>item</div>
+  <Space />
+  <div className='x'>item</div>
+
+  <p>space / vertical / 2</p>
+  <div className='x'>item</div>
+  <Space size="2" />
+  <div className='x'>item</div>
+
+  <p>space / horizontal</p>
+  <span className='x'>item</span>
+  <Space dir="x" display="inline-flex" />
+  <span className='x'>item</span>
+</section>
 
 
 ## Flex

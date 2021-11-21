@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { css, jsx } from "@emotion/react";
 
 import {
-  DIRECTION_TYPES,
   DIRECTION_XY_TYPES,
   DISPLAY_TYPES,
   MAP_SPACE,

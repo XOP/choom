@@ -86,7 +86,7 @@ const Picture = ({
           <span
             css={css`
             opacity: 0.25;
-            color" ${theme.colorDarkTemp};
+            color: ${theme.colorDarkTemp};
           `}
           >
             <Icon>

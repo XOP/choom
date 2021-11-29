@@ -145,16 +145,20 @@ export const FLEX_DIR_TYPES = ["row", "column"];
 
 export const FLEX_ALIGN_TYPES = [
   "start",
+  "flex-start",
   "center",
   "end",
+  "flex-end",
   "baseline",
   "stretch",
 ];
 
 export const FLEX_ALIGNSELF_TYPES = [
   "start",
+  "flex-start",
   "center",
   "end",
+  "flex-end",
   "auto",
   "baseline",
   "stretch",
@@ -162,8 +166,10 @@ export const FLEX_ALIGNSELF_TYPES = [
 
 export const FLEX_JUSTIFY_TYPES = [
   "start",
+  "flex-start",
   "center",
   "end",
+  "flex-end",
   "space-between",
   "space-around",
 ];

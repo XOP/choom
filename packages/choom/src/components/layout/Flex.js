@@ -61,6 +61,7 @@ Flex.propTypes = {
   as: PropTypes.string,
   fluid: PropTypes.bool,
   stretch: PropTypes.bool,
+  wrap: PropTypes.bool,
   dir: PropTypes.oneOf(FLEX_DIR_TYPES),
   align: PropTypes.oneOf(FLEX_ALIGN_TYPES),
   justify: PropTypes.oneOf(FLEX_JUSTIFY_TYPES),

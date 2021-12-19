@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from "@storybook/addon-docs";
 
 import Button from "choom/src/components/button/Button";
 import Card from "choom/src/components/card/Card";
@@ -7,7 +7,7 @@ import Divider from "choom/src/components/divider/Divider";
 import Icon from "choom/src/components/icon/Icon";
 import Loader from "choom/src/components/loader/Loader";
 
-import { Clock } from 'react-feather';
+import { Clock } from "react-feather";
 
 <Meta title="Choom Common" />
 
@@ -26,13 +26,30 @@ import { Clock } from 'react-feather';
 
 # Choom common
 
-
 ## Button
 
 <section className="s">
-  <Button size='big'>Button</Button>
+  <Button size="big">Button</Button>
   <Button>Button</Button>
-  <Button size='small'>Button</Button>
+  <Button size="small">Button</Button>
+</section>
+
+<section className="s">
+  <Button isIcon>
+    <Icon><Clock /></Icon>
+  </Button>
+
+  <Button iconStart={<Icon size="inherit"><Clock /></Icon>}>
+    Button
+  </Button>
+
+  <Button iconEnd={<Icon size="inherit"><Clock /></Icon>}>
+    Button
+  </Button>
+
+  <Button>
+    Button
+  </Button>
 </section>
 
 <section className="s">
@@ -43,48 +60,42 @@ import { Clock } from 'react-feather';
   <Button fluid>Button</Button>
 </section>
 
-
 ## Icon
 
 <section className="s">
   <Icon size='small'>
     <Clock />
   </Icon>
-
   <Icon>
     <Clock />
   </Icon>
-
   <Icon size='big'>
     <Clock />
   </Icon>
 </section>
 
-
 ## Loader
 
 <section className="s">
-  <Loader  />
-  <Divider mt='2' mb='2' />
-  <Loader size='small' display='inline-block' />
-  <Loader size='regular' display='inline-block'/>
-  <Loader size='big' display='inline-block' />
+  <Loader />
+  <Divider mt="2" mb="2" />
+  <Loader size="small" display="inline-block" />
+  <Loader size="regular" display="inline-block" />
+  <Loader size="big" display="inline-block" />
 </section>
-
 
 ## Chip
 
 <section className="s">
   <Chip>Chip</Chip>
-  <Chip onClick={() => console.log('Chip onClick')}>Chip with onClick</Chip>
+  <Chip onClick={() => console.log("Chip onClick")}>Chip with onClick</Chip>
   <Chip>Chip with a taaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaail</Chip>
 </section>
-
 
 ## Card
 
 <section className="s">
   <Card>Card with Divider at the bottom</Card>
-  <Divider mt='2' mb='2' />
+  <Divider mt="2" mb="2" />
   <Card>Card with Divider at the top</Card>
 </section>

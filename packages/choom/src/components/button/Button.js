@@ -44,6 +44,11 @@ const Button = ({
         appearance: none;
 
         box-sizing: border-box;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+
         height: calc(
           ${paddingY} * 2 + ${fontSize} * ${theme.lineHeightN} + 2 *
             ${theme.borderSizeRegular}
@@ -109,7 +114,11 @@ const Button = ({
       )}
       <span
         css={css`
-          ${isIcon && `vertical-align: text-top;`}
+          ${isIcon &&
+          `
+            display: inline-flex;
+            vertical-align: middle;
+          `}
         `}
       >
         {children}

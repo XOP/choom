@@ -1,13 +1,14 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 
 import Flow from "./Flex";
 import FlexUnit from "./FlexUnit";
 
-import {
-  FLEX_ALIGN_TYPES,
-  SPACE_TYPES,
-} from "../../theme/theme";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, ClassNames } from "@emotion/react";
+
+import { FLEX_ALIGN_TYPES, SPACE_TYPES } from "../../theme/theme";
 
 const Media = ({
   className,
@@ -20,30 +21,66 @@ const Media = ({
   space = "1",
 }) => {
   return (
-    <Flow
-      as={as}
-      align={align}
-      justify="start"
-      wrap={false}
-      space={space}
-      className={className}
-    >
-      {start && (
-        <FlexUnit as={asUnit} grow="0" shrink="1" align={align}>
-          {start}
-        </FlexUnit>
-      )}
-      {children && (
-        <FlexUnit as={asUnit} grow="1" shrink="1" align={align}>
-          {children}
-        </FlexUnit>
-      )}
-      {end && (
-        <FlexUnit as={asUnit} grow="0" shrink="1" align={align}>
-          {end}
-        </FlexUnit>
-      )}
-    </Flow>
+    <ClassNames>
+      {({ css, cx }) => {
+        return (
+          <Flow
+            as={as}
+            align={align}
+            justify="start"
+            wrap={false}
+            space={space}
+            className={className}
+          >
+            {start && (
+              <FlexUnit
+                as={asUnit}
+                grow="0"
+                shrink="1"
+                align={align}
+                className={cx(
+                  css`
+                    display: inline-flex;
+                  `
+                )}
+              >
+                {start}
+              </FlexUnit>
+            )}
+            {children && (
+              <FlexUnit
+                as={asUnit}
+                grow="1"
+                shrink="1"
+                align={align}
+                className={cx(
+                  css`
+                    display: inline-flex;
+                  `
+                )}
+              >
+                {children}
+              </FlexUnit>
+            )}
+            {end && (
+              <FlexUnit
+                as={asUnit}
+                grow="0"
+                shrink="1"
+                align={align}
+                className={cx(
+                  css`
+                    display: inline-flex;
+                  `
+                )}
+              >
+                {end}
+              </FlexUnit>
+            )}
+          </Flow>
+        );
+      }}
+    </ClassNames>
   );
 };
 

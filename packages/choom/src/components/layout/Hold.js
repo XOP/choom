@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import { jsx, ClassNames } from "@emotion/react";
 
 import Flex from "./Flex";
-import FlexUnit from "./FlexUnit";
 
 import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES } from "../../theme/theme";
 

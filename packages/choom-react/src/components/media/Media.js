@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Flow from "./Flex";
-import FlexUnit from "./FlexUnit";
+import Flow from "../flow/Flow";
+import FlexUnit from "../flex/FlexUnit";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */

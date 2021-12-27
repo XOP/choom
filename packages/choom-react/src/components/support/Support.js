@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { jsx, ClassNames } from "@emotion/react";
 
-import Flex from "./Flex";
+import Flex from '../flex/Flex';
 
 import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES } from "../../theme/theme";
 
-const Hold = ({
+const Support = ({
   className,
   children,
   as = "div",
@@ -25,8 +25,8 @@ const Hold = ({
             align={align}
             justify={justify}
             space="0"
-            wrap={true}
-            dir="row"
+            wrap={false}
+            dir="column"
             className={cx(
               className,
               css`
@@ -46,7 +46,7 @@ const Hold = ({
   );
 };
 
-Hold.propTypes = {
+Support.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   as: PropTypes.string,
@@ -54,4 +54,4 @@ Hold.propTypes = {
   justify: PropTypes.oneOf(FLEX_JUSTIFY_TYPES),
 };
 
-export default Hold;
+export default Support;

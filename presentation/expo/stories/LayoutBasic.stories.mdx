@@ -1,12 +1,11 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta } from "@storybook/addon-docs";
 
-import Flex from "choom-react/src/components/layout/Flex";
-import Flow from "choom-react/src/components/layout/Flow";
-import Media from "choom-react/src/components/layout/Media";
-import Hold from "choom-react/src/components/layout/Hold";
-import Stack from "choom-react/src/components/layout/Stack";
-import FlexUnit from "choom-react/src/components/layout/FlexUnit";
-
+import Flex from "choom-react/src/components/flex/Flex";
+import FlexUnit from "choom-react/src/components/flex/FlexUnit";
+import Flow from "choom-react/src/components/flow/Flow";
+import Media from "choom-react/src/components/media/Media";
+import Hold from "choom-react/src/components/hold/Hold";
+import Stack from "choom-react/src/components/stack/Stack";
 import Space from "choom-react/src/components/space/Space";
 
 <Meta title="Choom Layout Basic" />
@@ -44,7 +43,6 @@ import Space from "choom-react/src/components/space/Space";
 
 # Choom Layout Basic
 
-
 ## Space
 
 <section className="s">
@@ -54,16 +52,15 @@ import Space from "choom-react/src/components/space/Space";
   <div className='x'>item</div>
 
   <p>space / vertical / 2</p>
-  <div className='x'>item</div>
+  <div className="x">item</div>
   <Space size="2" />
-  <div className='x'>item</div>
+  <div className="x">item</div>
 
   <p>space / horizontal</p>
   <span className='x'>item</span>
   <Space dir="x" display="inline-flex" />
   <span className='x'>item</span>
 </section>
-
 
 ## Flex
 
@@ -75,23 +72,23 @@ import Space from "choom-react/src/components/space/Space";
 
   <p>flex / 3 items</p>
   <Flex>
-    <div className='x'>item</div>
-    <div className='x'>item</div>
-    <div className='x'>item</div>
+    <div className="x">item</div>
+    <div className="x">item</div>
+    <div className="x">item</div>
   </Flex>
 
   <p>flex / spacing</p>
-  <Flex space='0.5'>
-    <div className='x'>item</div>
-    <div className='x'>item</div>
-    <div className='x'>item</div>
+  <Flex space="0.5">
+    <div className="x">item</div>
+    <div className="x">item</div>
+    <div className="x">item</div>
   </Flex>
 
   <p>flex / justify start </p>
-  <Flex justify='start'>
-    <div className='x'>item</div>
-    <div className='x'>item</div>
-    <div className='x'>item</div>
+  <Flex justify="start">
+    <div className="x">item</div>
+    <div className="x">item</div>
+    <div className="x">item</div>
   </Flex>
 
   <p>flex / justify space-between </p>
@@ -101,7 +98,6 @@ import Space from "choom-react/src/components/space/Space";
     <div className='x'>item</div>
   </Flex>
 </section>
-
 
 ## Flow
 
@@ -125,7 +121,6 @@ import Space from "choom-react/src/components/space/Space";
   </Flow>
 </section>
 
-
 ## Media
 
 <section className="s">
@@ -138,26 +133,30 @@ import Space from "choom-react/src/components/space/Space";
 
   <p>media / 3 items</p>
   <Media
-    start={<div className='x'>item start</div>}
-    end={<div className='x'>item end</div>}
+    start={<div className="x">item start</div>}
+    end={<div className="x">item end</div>}
   >
-    <div className='x'>item main content</div>
+    <div className="x">item main content</div>
   </Media>
 
   <p>media / spacing</p>
   <Media
-    start={<div className='x'>item start</div>}
-    end={<div className='x'>item end</div>}
-    space='0.5'
+    start={<div className="x">item start</div>}
+    end={<div className="x">item end</div>}
+    space="0.5"
   >
-    <div className='x'>item main content</div>
+    <div className="x">item main content</div>
   </Media>
 
   <p>media / align top</p>
   <Media
-    start={<div className='x' style={{ padding: '1rem' }}>item start</div>}
+    start={
+      <div className="x" style={{ padding: "1rem" }}>
+        item start
+      </div>
+    }
   >
-    <div className='x'>item main content</div>
+    <div className="x">item main content</div>
   </Media>
 
   <p>media / align center</p>
@@ -168,7 +167,6 @@ import Space from "choom-react/src/components/space/Space";
     <div className='x'>item main content</div>
   </Media>
 </section>
-
 
 ## Stack
 
@@ -181,17 +179,23 @@ import Space from "choom-react/src/components/space/Space";
   </Stack>
 
   <p>stack / spacing</p>
-  <Stack space='0.5'>
-    <div className='x'>item</div>
-    <div className='x'>item</div>
-    <div className='x'>item</div>
+  <Stack space="0.5">
+    <div className="x">item</div>
+    <div className="x">item</div>
+    <div className="x">item</div>
   </Stack>
 
   <p>stack / dir x</p>
-  <Stack dir='x'>
-    <div className='x' style={{ display: 'inline-block' }}>item</div>
-    <div className='x' style={{ display: 'inline-block' }}>item</div>
-    <div className='x' style={{ display: 'inline-block' }}>item</div>
+  <Stack dir="x">
+    <div className="x" style={{ display: "inline-block" }}>
+      item
+    </div>
+    <div className="x" style={{ display: "inline-block" }}>
+      item
+    </div>
+    <div className="x" style={{ display: "inline-block" }}>
+      item
+    </div>
   </Stack>
 
   <p>stack / dir xy</p>

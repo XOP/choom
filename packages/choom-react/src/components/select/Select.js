@@ -10,7 +10,7 @@ import { css, jsx } from "@emotion/react";
 
 import theme, { SIZES_TYPES } from "../../theme/theme";
 
-import { Icon } from "..";
+import Icon from '../icon/Icon';
 
 const Select = ({
   className,

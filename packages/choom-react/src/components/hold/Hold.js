@@ -1,22 +1,20 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, ClassNames } from "@emotion/react";
 
-import Flex from "./Flex";
+import Flex from '../flex/Flex';
 
-import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES, SPACE_TYPES } from "../../theme/theme";
+import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES } from "../../theme/theme";
 
-const Flow = ({
+const Hold = ({
   className,
   children,
   as = "div",
-  align = "start",
+  align = "center",
   justify = "center",
-  space = '1',
-  wrap = false,
 }) => {
   return (
     <ClassNames>
@@ -26,12 +24,17 @@ const Flow = ({
             as={as}
             align={align}
             justify={justify}
-            space={space}
-            wrap={wrap}
+            space="0"
+            wrap={true}
+            dir="row"
             className={cx(
               className,
               css`
-                flex-direction: row;
+                flex-grow: 1;
+                min-height: 100%;
+                min-width: 100%;
+                height: 100%;
+                width: 100%;
               `
             )}
           >
@@ -43,14 +46,12 @@ const Flow = ({
   );
 };
 
-Flow.propTypes = {
+Hold.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   as: PropTypes.string,
   align: PropTypes.oneOf(FLEX_ALIGN_TYPES),
   justify: PropTypes.oneOf(FLEX_JUSTIFY_TYPES),
-  space: PropTypes.oneOf(SPACE_TYPES),
-  wrap: PropTypes.bool,
 };
 
-export default Flow;
+export default Hold;

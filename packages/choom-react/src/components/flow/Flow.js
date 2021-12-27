@@ -5,16 +5,22 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { jsx, ClassNames } from "@emotion/react";
 
-import Flex from "./Flex";
+import Flex from '../flex/Flex';
 
-import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES } from "../../theme/theme";
+import {
+  FLEX_ALIGN_TYPES,
+  FLEX_JUSTIFY_TYPES,
+  SPACE_TYPES,
+} from "../../theme/theme";
 
-const Support = ({
+const Flow = ({
   className,
   children,
   as = "div",
-  align = "center",
+  align = "start",
   justify = "center",
+  space = "1",
+  wrap = false,
 }) => {
   return (
     <ClassNames>
@@ -24,17 +30,12 @@ const Support = ({
             as={as}
             align={align}
             justify={justify}
-            space="0"
-            wrap={false}
-            dir="column"
+            space={space}
+            wrap={wrap}
             className={cx(
               className,
               css`
-                flex-grow: 1;
-                min-height: 100%;
-                min-width: 100%;
-                height: 100%;
-                width: 100%;
+                flex-direction: row;
               `
             )}
           >
@@ -46,12 +47,14 @@ const Support = ({
   );
 };
 
-Support.propTypes = {
+Flow.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node.isRequired,
   as: PropTypes.string,
   align: PropTypes.oneOf(FLEX_ALIGN_TYPES),
   justify: PropTypes.oneOf(FLEX_JUSTIFY_TYPES),
+  space: PropTypes.oneOf(SPACE_TYPES),
+  wrap: PropTypes.bool,
 };
 
-export default Support;
+export default Flow;

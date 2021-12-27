@@ -9,7 +9,9 @@ import { css, jsx } from "@emotion/react";
 
 import theme from "../../theme/theme";
 
-import { Button, Heading, Icon } from "..";
+import Button from '../button/Button';
+import Heading from '../heading/Heading';
+import Icon from '../icon/Icon';
 
 const modalRoot =
   typeof window === "undefined" ? null : document.getElementById("choom-modal");

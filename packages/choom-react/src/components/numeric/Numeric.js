@@ -10,7 +10,8 @@ import { Minus as IconMinus, Plus as IconPlus } from "react-feather";
 
 import theme from "../../theme/theme";
 
-import { Button, Icon } from "..";
+import Button from '../button/Button';
+import Icon from '../icon/Icon';
 
 const Numeric = ({
   className,

@@ -1,6 +1,6 @@
 {
-  "name": "choom",
-  "version": "0.0.5",
+  "name": "choom-react",
+  "version": "0.1.0",
   "description": "UI building blocks for your next ReactJS prototype",
   "keywords": [
     "react",

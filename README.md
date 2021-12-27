@@ -1,3 +1,3 @@
 # CHOOM
 
-## [Documentation](./packages/choom/README.md)
+## [Documentation](./packages/choom-react/README.md)

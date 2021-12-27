@@ -48,6 +48,7 @@ const Numeric = ({
           <div
             css={css`
               display: inline-flex;
+              vertical-align: middle;
               flex-direction: row;
               flex-wrap: nowrap;
 
@@ -90,6 +91,7 @@ const Numeric = ({
                 display: inline-flex;
                 flex: 0 1 3ch;
                 min-width: 3ch;
+                max-width: 0;
                 height: calc(
                   ${theme.fontSizeM} * ${theme.lineHeightN} + ${theme.spaceHalf} *
                     2

@@ -33,14 +33,14 @@ const Switch = ({
     <label
       css={css`
         box-sizing: content-box;
-        display: inline-block;
+        display: inline-flex;
+        vertical-align: middle;
+
         position: relative;
         height: ${theme.spaceOneAndHalf};
         width: ${theme.spaceFour};
-        top: ${theme.spaceHalf};
-        margin-top: calc(-1 * ${theme.spaceQuarter});
 
-        border: ${theme.borderSizeLight} solid ${theme.colorDarkTemp};
+        border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
         border-radius: ${theme.spaceOne};
 
         background: ${isChecked ? theme.colorThemeTemp : theme.colorLightTemp};

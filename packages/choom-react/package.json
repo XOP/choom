@@ -26,7 +26,7 @@
     "build": "yarn cleanup && yarn setup && yarn build:env && yarn build:esm",
     "theme": "yarn theme:env && yarn theme:esm",
     "compile": "yarn build && yarn theme",
-    "prepublish": "yarn compile"
+    "prepare": "yarn compile"
   },
   "repository": {
     "type": "git",

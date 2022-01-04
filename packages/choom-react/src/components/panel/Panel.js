@@ -10,6 +10,7 @@ import theme, {
   POSITION_TYPES,
   PLACEMENT_Y_TYPES,
   MAP_SPACE,
+  TEXT_ALIGN_TYPES,
 } from "../../theme/theme";
 
 const Panel = ({
@@ -19,6 +20,7 @@ const Panel = ({
   position = "fixed",
   placement = "top",
   padding = "2",
+  align = "left",
 }) => {
   const space = MAP_SPACE[String(padding)];
 
@@ -50,6 +52,7 @@ const Panel = ({
                 border: ${theme.borderSizeRegular} solid ${theme.colorDarkTemp};
                 border-radius: ${theme.radiusRegular};
 
+                text-align: ${align};
                 color: ${theme.colorDarkTemp};
                 font-size: ${theme.fontSizeN};
                 font-family: ${theme.fontFamily};
@@ -71,6 +74,7 @@ Panel.propTypes = {
   children: PropTypes.node.isRequired,
   as: PropTypes.string,
   padding: PropTypes.oneOf(SPACE_TYPES),
+  align: PropTypes.oneOf(TEXT_ALIGN_TYPES),
   position: PropTypes.oneOf(POSITION_TYPES),
   placement: PropTypes.oneOf(PLACEMENT_Y_TYPES),
 };

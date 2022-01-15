@@ -1,0 +1,35 @@
+{
+  "name": "choom-theme",
+  "version": "0.1.0",
+  "description": "CSS and CSS-in-JS theme for Choom UI",
+  "keywords": [
+    "css",
+    "css-in-js",
+    "ui",
+    "design-system",
+    "components",
+    "theme",
+    "ui kit"
+  ],
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "cleanup": "rm -rf dist && mkdir dist",
+    "setup": "node scripts/theme",
+    "build:env": "babel src -d dist && babel src/*.css -d dist --copy-files",
+    "build:esm": "NODE_ENV=esm babel src -d dist/esm && babel src/*.css -d dist/esm --copy-files",
+    "build": "yarn cleanup && yarn setup && yarn build:env && yarn build:esm",
+    "compile": "yarn build",
+    "prepare": "yarn compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOP/choom.git"
+  },
+  "author": "XOP",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/XOP/choom#readme"
+}

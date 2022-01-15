@@ -1,6 +1,6 @@
 {
   "name": "choom-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "UI building blocks for your next ReactJS prototype",
   "keywords": [
     "react",
@@ -21,11 +21,8 @@
     "setup": "node scripts/theme",
     "build:env": "babel src/components -d lib/components",
     "build:esm": "NODE_ENV=esm babel src/components -d lib/esm/components",
-    "theme:env": "babel src/theme -d lib/theme && babel src/theme/*.css -d lib/theme --copy-files",
-    "theme:esm": "babel src/theme -d lib/esm/theme && babel src/theme/*.css -d lib/esm/theme --copy-files",
     "build": "yarn cleanup && yarn setup && yarn build:env && yarn build:esm",
-    "theme": "yarn theme:env && yarn theme:esm",
-    "compile": "yarn build && yarn theme",
+    "compile": "yarn build",
     "prepare": "yarn compile"
   },
   "repository": {

@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "yarn workspace choom-expo start",
     "build": "yarn workspace choom-react compile",
-    "theme": "yarn workspace choom-react setup"
+    "theme": "yarn workspace choom-theme compile"
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",

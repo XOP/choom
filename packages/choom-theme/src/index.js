@@ -1,5 +1,5 @@
 /* eslint import/no-webpack-loader-syntax: off */
-import theme from "./build";
+import theme from "../build";
 
 const defaultTheme = {
   spaceEighth: theme.spaceEighth,
@@ -151,6 +151,7 @@ export const FLEX_ALIGN_TYPES = [
   "flex-end",
   "baseline",
   "stretch",
+  "initial",
 ];
 
 export const FLEX_ALIGNSELF_TYPES = [
@@ -162,6 +163,7 @@ export const FLEX_ALIGNSELF_TYPES = [
   "auto",
   "baseline",
   "stretch",
+  "initial",
 ];
 
 export const FLEX_JUSTIFY_TYPES = [
@@ -172,6 +174,7 @@ export const FLEX_JUSTIFY_TYPES = [
   "flex-end",
   "space-between",
   "space-around",
+  "initial",
 ];
 
 export const FLEX_SIZE_TYPES = [

@@ -1,6 +1,6 @@
 # CHOOM
 
-![npm](https://img.shields.io/npm/v/choom)
+![npm](https://img.shields.io/npm/v/choom-react)
 
 Trusted UI companion for your next React prototype.
 

@@ -11,7 +11,7 @@ import {
   FLEX_ALIGN_TYPES,
   FLEX_JUSTIFY_TYPES,
   SPACE_TYPES,
-} from "../../theme/theme";
+} from "choom-theme";
 
 const Flow = ({
   className,

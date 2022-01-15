@@ -9,7 +9,7 @@ import {
   DIRECTION_XY_TYPES,
   MAP_SPACE,
   SPACE_TYPES,
-} from "../../theme/theme";
+} from "choom-theme";
 
 const Stack = ({ className, children, as = "div", dir = "y", space = "1" }) => {
   const spaceValue = MAP_SPACE[String(space)];

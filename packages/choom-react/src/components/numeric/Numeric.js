@@ -8,7 +8,7 @@ import { ClassNames, css, jsx } from "@emotion/react";
 
 import { Minus as IconMinus, Plus as IconPlus } from "react-feather";
 
-import theme from "../../theme/theme";
+import theme from "choom-theme";
 
 import Button from '../button/Button';
 import Icon from '../icon/Icon';

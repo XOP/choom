@@ -5,9 +5,9 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { jsx, ClassNames } from "@emotion/react";
 
-import Flex from '../flex/Flex';
+import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES } from "choom-theme";
 
-import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES } from "../../theme/theme";
+import Flex from "../flex/Flex";
 
 const Hold = ({
   className,

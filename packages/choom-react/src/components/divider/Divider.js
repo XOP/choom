@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme, { MAP_SPACE, SPACE_TYPES } from "../../theme/theme";
+import theme, { MAP_SPACE, SPACE_TYPES } from "choom-theme";
 
 const Divider = ({ className, mt = "1", mb = "1" }) => {
   const spaceTop = MAP_SPACE[String(mt)];

@@ -8,7 +8,7 @@ import FlexUnit from "../flex/FlexUnit";
 /** @jsx jsx */
 import { jsx, ClassNames } from "@emotion/react";
 
-import { FLEX_ALIGN_TYPES, SPACE_TYPES } from "../../theme/theme";
+import { FLEX_ALIGN_TYPES, SPACE_TYPES } from "choom-theme";
 
 const Media = ({
   className,

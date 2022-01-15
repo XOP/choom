@@ -9,7 +9,7 @@ import theme, {
   MAP_SPACE,
   SPACE_TYPES,
   TEXT_ALIGN_TYPES,
-} from "../../theme/theme";
+} from "choom-theme";
 
 const MAP_HEADING_FONTSIZE = {
   1: theme.fontSize4xl,

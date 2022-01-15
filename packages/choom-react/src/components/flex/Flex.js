@@ -11,7 +11,7 @@ import {
   FLEX_JUSTIFY_TYPES,
   MAP_SPACE,
   SPACE_TYPES,
-} from "../../theme/theme";
+} from "choom-theme";
 
 const Flex = ({
   className,

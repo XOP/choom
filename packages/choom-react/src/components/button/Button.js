@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
-import theme, { INPUT_TYPES, SIZES_TYPES } from "../../theme/theme";
+import theme, { INPUT_TYPES, SIZES_TYPES } from "choom-theme";
 
 const Button = ({
   className,

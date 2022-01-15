@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { jsx, css, ClassNames } from "@emotion/react";
 
-import { MAP_SPACE, SPACE_TYPES, DIRECTION_TYPES } from "../../theme/theme";
+import { MAP_SPACE, SPACE_TYPES, DIRECTION_TYPES } from "choom-theme";
 
 const Contain = ({
   className,

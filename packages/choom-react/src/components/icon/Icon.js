@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme, { ICON_SIZES_TYPES, MAP_ICONS } from "../../theme/theme";
+import { ICON_SIZES_TYPES, MAP_ICONS } from "choom-theme";
 
 const Icon = ({ className, children, title = "", size = "regular" }) => {
   let sizeVal = 'inherit';

@@ -11,7 +11,7 @@ import theme, {
   PLACEMENT_Y_TYPES,
   MAP_SPACE,
   TEXT_ALIGN_TYPES,
-} from "../../theme/theme";
+} from "choom-theme";
 
 const Panel = ({
   className,

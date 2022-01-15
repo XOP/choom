@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 import { css, jsx } from "@emotion/react";
 import { Image } from "react-feather";
 
+import theme, { ASPECT_RATIO_TYPES, IMG_FIT_TYPES } from "choom-theme";
+
 import Hold from '../hold/Hold';
 import Icon from '../icon/Icon';
-
-import theme, { ASPECT_RATIO_TYPES, IMG_FIT_TYPES } from "../../theme/theme";
 
 const getUnit = (strValue) => strValue.match(/[a-z, %]+$/)[0] || "";
 const parseAspectRatio = (strValue) => {

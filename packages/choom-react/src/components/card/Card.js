@@ -4,11 +4,7 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme, {
-  MAP_SPACE,
-  SPACE_TYPES,
-  TEXT_ALIGN_TYPES,
-} from "../../theme/theme";
+import theme, { MAP_SPACE, SPACE_TYPES, TEXT_ALIGN_TYPES } from "choom-theme";
 
 const Card = ({
   className,
@@ -23,7 +19,7 @@ const Card = ({
   return (
     <div
       className={className}
-      title={title === '' ? undefined : title}
+      title={title === "" ? undefined : title}
       onClick={onClick}
       css={css`
         padding: ${space};
@@ -39,9 +35,7 @@ const Card = ({
         line-height: ${theme.lineHeightN};
         font-family: ${theme.fontFamily};
 
-        ${onClick !== undefined && 
-          `cursor: pointer;`
-        }
+        ${onClick !== undefined && `cursor: pointer;`}
       `}
     >
       {children}
@@ -56,8 +50,9 @@ Card.propTypes = {
   align: PropTypes.oneOf(TEXT_ALIGN_TYPES),
   padding: PropTypes.oneOf(SPACE_TYPES),
   onClick: PropTypes.oneOfType([
-    PropTypes.func, PropTypes.instanceOf(undefined)
-  ])
+    PropTypes.func,
+    PropTypes.instanceOf(undefined),
+  ]),
 };
 
 export default Card;

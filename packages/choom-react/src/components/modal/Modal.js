@@ -7,7 +7,7 @@ import { X as IconX } from "react-feather";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme from "../../theme/theme";
+import theme from "choom-theme";
 
 import Button from '../button/Button';
 import Heading from '../heading/Heading';

@@ -8,7 +8,7 @@ import theme, {
   DISPLAY_TYPES,
   ELEVATION_TYPES,
   SIZES_TYPES,
-} from "../../theme/theme";
+} from "choom-theme";
 
 const Loader = ({
   className,

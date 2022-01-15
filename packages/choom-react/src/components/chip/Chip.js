@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme from "../../theme/theme";
+import theme from "choom-theme";
 
 const Chip = ({ className, children, title = "", onClick }) => {
   const heightEx = `${theme.fontSizeM} * ${theme.lineHeightS} + 2 * ${theme.spaceHalf} + 2 * ${theme.borderSizeRegular}`;

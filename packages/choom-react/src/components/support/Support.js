@@ -7,7 +7,7 @@ import { jsx, ClassNames } from "@emotion/react";
 
 import Flex from '../flex/Flex';
 
-import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES } from "../../theme/theme";
+import { FLEX_ALIGN_TYPES, FLEX_JUSTIFY_TYPES } from "choom-theme";
 
 const Support = ({
   className,

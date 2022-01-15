@@ -7,7 +7,7 @@ import { useState, useRef } from "react";
 import { css, jsx } from "@emotion/react";
 import { nanoid } from "nanoid";
 
-import theme from "../../theme/theme";
+import theme from "choom-theme";
 
 const Switch = ({
   className,

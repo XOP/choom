@@ -8,7 +8,7 @@ import { ChevronDown as IconArrowDown } from "react-feather";
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme, { SIZES_TYPES } from "../../theme/theme";
+import theme, { SIZES_TYPES } from "choom-theme";
 
 import Icon from '../icon/Icon';
 

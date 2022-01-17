@@ -1,0 +1,41 @@
+{
+  "name": "choom-vue",
+  "version": "0.1.0",
+  "description": "UI building blocks for your next Vue 3.0 prototype",
+  "keywords": [
+    "vue",
+    "vue3",
+    "ui",
+    "design-system",
+    "components",
+    "presentational"
+  ],
+  "main": "lib/components/index.js",
+  "module": "lib/esm/components/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "cleanup": "rm -rf lib && mkdir lib",
+    "build:env": "babel src/components -d lib/components",
+    "build:esm": "NODE_ENV=esm babel src/components -d lib/esm/components",
+    "build": "yarn cleanup && yarn build:env && yarn build:esm",
+    "compile": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOP/choom.git"
+  },
+  "author": "XOP",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/XOP/choom#readme",
+  "dependencies": {
+    "choom-theme": "0.1.0",
+    "clsx": "^1.1.1",
+    "nanoid": "^3.1.30",
+    "vue-tabler-icons": "^2.1.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2"
+  }
+}

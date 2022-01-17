@@ -22,8 +22,7 @@
     "build:env": "babel src -d dist && babel src/*.css -d dist --copy-files",
     "build:esm": "NODE_ENV=esm babel src -d dist/esm && babel src/*.css -d dist/esm --copy-files",
     "build": "yarn cleanup && yarn setup && yarn build:env && yarn build:esm",
-    "compile": "yarn build",
-    "prepare": "yarn compile"
+    "compile": "yarn build"
   },
   "repository": {
     "type": "git",

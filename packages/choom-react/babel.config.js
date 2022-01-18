@@ -1,3 +1,15 @@
 module.exports = {
-  extends: '../../babel.config.js'
-}
+  presets: ["@babel/preset-env", "@babel/preset-react"],
+  env: {
+    esm: {
+      presets: [
+        [
+          "@babel/preset-env",
+          {
+            modules: false,
+          },
+        ],
+      ],
+    },
+  },
+};

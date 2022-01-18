@@ -5,16 +5,8 @@
     "presentation/*"
   ],
   "scripts": {
-    "dev": "yarn workspace choom-expo start",
     "build": "yarn workspace choom-react compile",
-    "theme": "yarn workspace choom-theme compile"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.15.7",
-    "@babel/core": "^7.15.8",
-    "@babel/preset-env": "^7.15.8",
-    "@babel/preset-react": "^7.14.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "theme": "yarn workspace choom-theme compile",
+    "expo": "yarn workspace choom-expo start"
   }
 }

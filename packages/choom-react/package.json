@@ -11,6 +11,13 @@
     "styled-components",
     "presentational"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOP/choom.git"
+  },
+  "author": "XOP",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/XOP/choom#readme",
   "main": "lib/components/index.js",
   "module": "lib/esm/components/index.js",
   "files": [
@@ -23,19 +30,18 @@
     "build": "yarn cleanup && yarn build:env && yarn build:esm",
     "compile": "yarn build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/XOP/choom.git"
-  },
-  "author": "XOP",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/XOP/choom#readme",
   "dependencies": {
     "@emotion/react": "^11.0.0",
     "choom-theme": "0.1.0",
     "nanoid": "^3.1.29",
     "prop-types": "^15.7.2",
     "react-feather": "^2.0.9"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5"
   },
   "peerDependencies": {
     "react": "^17.0.2",

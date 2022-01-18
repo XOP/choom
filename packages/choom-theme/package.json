@@ -11,6 +11,13 @@
     "theme",
     "ui kit"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOP/choom.git"
+  },
+  "author": "XOP",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/XOP/choom#readme",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",
   "files": [
@@ -24,11 +31,9 @@
     "build": "yarn cleanup && yarn setup && yarn build:env && yarn build:esm",
     "compile": "yarn build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/XOP/choom.git"
-  },
-  "author": "XOP",
-  "license": "Apache-2.0",
-  "homepage": "https://github.com/XOP/choom#readme"
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8"
+  }
 }

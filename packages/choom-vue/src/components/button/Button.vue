@@ -118,7 +118,7 @@ export default {
 };
 </script>
 
-<style module>
+<style module lang="scss">
 .root {
   appearance: none;
 
@@ -151,27 +151,25 @@ export default {
   transition: all 0.15s;
   user-select: none;
 
-/*
-  // @media (hover: hover) {
-  //   &:hover:not([disabled]) {
-  //     filter: brightness(1.2);
-  //   }
-  // }
+  @media (hover: hover) {
+    &:hover:not([disabled]) {
+      filter: brightness(1.2);
+    }
+  }
 
-  // &:active:not([disabled]) {
-  //   filter: contrast(0.8);
-  //   transform: translateY(1px);
-  // }
+  &:active:not([disabled]) {
+    filter: contrast(0.8);
+    transform: translateY(1px);
+  }
 
-  // &:nth-of-type(n + 2) {
-  //   margin-left: var(--space-one);
-  // }
+  &:nth-of-type(n + 2) {
+    margin-left: var(--space-one);
+  }
 
-  // &[disabled] {
-  //   cursor: default;
-  //   opacity: 0.5;
-  // }
-*/
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
 }
 
 .fluid {

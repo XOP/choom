@@ -35,10 +35,10 @@ const baseConfig = {
         modules: {
           generateScopedName: "[local]__[hash:base64:5]",
         },
-        include: /&module=.*\.css$/,
+        include: /&module=.*\.scss$/,
       }),
       // Process all `<style>` blocks except `<style module>`.
-      PostCSS({ include: /(?<!&module=.*)\.css$/ }),
+      PostCSS({ include: /(?<!&module=.*)\.scss$/ }),
       commonjs(),
     ],
     babel: {

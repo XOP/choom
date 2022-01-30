@@ -1,10 +1,10 @@
-# CHOOM-REACT
+# CHOOM-VUE
 
-![npm](https://img.shields.io/npm/v/choom-react)
+![npm](https://img.shields.io/npm/v/choom-vue)
 
-Trusted UI companion for your next React prototype.
+Trusted UI companion for your next Vue 3 prototype.
 
-Choom React is built with the following concepts:
+Choom Vue is built with the following concepts:
 - sufficient variety of elements for the modern application prototyping
 - theming is opinionated, yet extensively and easily configurable
 - component API is a predictable facade, shared in similar entities
@@ -18,14 +18,21 @@ Prior to version `1.0.0` it is not recommended to use in anything more complex t
 ## Installation
 
 ```sh
-yarn add choom-react
+yarn add choom-vue
+```
+
+Use component imports in your app:  
+```js
+import { Button } from "choom-vue";
 ```
 
 ## Setup
 
 ### Styling
 
-`choom-react` depends on `choom-theme`.  
+#### Theme
+
+`choom-vue` depends on `choom-theme`.  
 
 After installing dependency you need to install the core CSS.  
 
@@ -33,7 +40,7 @@ After installing dependency you need to install the core CSS.
 import "choom-theme/dist/index.css";
 ```
 
-Additionally you can use the CSS-in-JS variables:
+Optionally you can use the CSS-in-JS variables:
 
 ```js
 import theme from "choom-theme";
@@ -41,13 +48,21 @@ import theme from "choom-theme";
 <strong style={{ fontSize: theme.fontSizeXl }}>...</strong>
 ```
 
+#### Library
+
+Temporarily `choom-vue` relies on the external CSS due to vite build features.  
+To support component styling add an additional import to your app:
+
+```js
+import "choom-vue/lib/index.css";
+```
+
 ## Links
 
-CHOOM-REACT is created with the help of the following packages:
+CHOOM-VUE is created with the help of the following packages:
 
-- [emotion](https://emotion.sh/docs/introduction)
 - [nanoid](https://www.npmjs.com/package/nanoid)
-- [react-feather](https://www.npmjs.com/package/react-feather)
+- [vue-tabler-icons](https://www.npmjs.com/package/vue-tabler-icons)
 
 ---
 

@@ -14,7 +14,7 @@ export default defineConfig({
     }),
     vueJsx({
       include: [],
-      exclude: /&lang.module.scss$/,
+      exclude: [/&lang.module.scss$/],
     }),
   ],
   build: {

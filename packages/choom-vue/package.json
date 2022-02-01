@@ -12,6 +12,12 @@
   ],
   "main": "lib/choom-vue.umd.js",
   "module": "lib/choom-vue.es.js",
+  "exports": {
+    ".": {
+      "import": "./lib/choom-vue.es.js",
+      "require": "./lib/choom-vue.umd.js"
+    }
+  },
   "files": [
     "lib/*",
     "src/**/*.vue"

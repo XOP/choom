@@ -2,19 +2,26 @@ import { resolve } from "path";
 
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
+import vueJsx from "@vitejs/plugin-vue-jsx";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue({
-    ssr: false,
-    isProduction: true,
-    reactivityTransform: true
-  })],
+  plugins: [
+    vue({
+      ssr: false,
+      isProduction: true,
+      reactivityTransform: true,
+    }),
+    vueJsx({
+      include: [],
+      exclude: /&lang.module.scss$/,
+    }),
+  ],
   build: {
     // https://github.com/vitejs/vite/issues/2679
     commonjsOptions: {
-      exclude: ["choom-theme/*"],
       include: [],
+      exclude: ["choom-theme/*"],
     },
     // waiting on the cssExtract: false option
     // https://github.com/vitejs/vite/issues/4345

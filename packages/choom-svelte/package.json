@@ -1,0 +1,36 @@
+{
+  "name": "choom-svelte",
+  "version": "0.0.1",
+  "description": "UI building blocks for your next Svelte 3 prototype",
+  "keywords": [
+    "svelte",
+    "svelte 3",
+    "ui",
+    "design-system",
+    "components",
+    "presentational"
+  ],
+  "files": [
+    "lib/*",
+    "src/**/*.svelte"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "cleanup": "rm -rf lib && mkdir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOP/choom.git"
+  },
+  "author": "XOP",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/XOP/choom#readme",
+  "dependencies": {
+    "choom-theme": "0.1.0",
+    "clsx": "^1.1.1",
+    "nanoid": "^3.1.30"
+  },
+  "devDependencies": {
+    "sass": "^1.49.0"
+  }
+}

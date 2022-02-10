@@ -10,13 +10,24 @@
     "components",
     "presentational"
   ],
+  "main": "lib/choom-svelte.umd.js",
+  "module": "lib/choom-svelte.es.js",
+  "exports": {
+    ".": {
+      "import": "./lib/choom-svelte.es.js",
+      "require": "./lib/choom-svelte.umd.js"
+    },
+    "./index.css": "./lib/index.css"
+  },
   "files": [
     "lib/*",
     "src/**/*.svelte"
   ],
   "sideEffects": false,
   "scripts": {
-    "cleanup": "rm -rf lib && mkdir lib"
+    "cleanup": "rm -rf lib && mkdir lib",
+    "build": "yarn cleanup && vite build -c ./build/vite.config.js",
+    "compile": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -33,7 +44,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.37",
     "sass": "^1.49.7",
-    "svelte": "^3.46.4",
+    "svelte": "3.39.0",
     "svelte-preprocess": "^4.10.2",
     "vite": "^2.8.0"
   }

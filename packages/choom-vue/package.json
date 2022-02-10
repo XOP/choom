@@ -16,7 +16,8 @@
     ".": {
       "import": "./lib/choom-vue.es.js",
       "require": "./lib/choom-vue.umd.js"
-    }
+    },
+    "./index.css": "./lib/index.css"
   },
   "files": [
     "lib/*",

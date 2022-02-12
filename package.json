@@ -5,8 +5,12 @@
     "presentation/*"
   ],
   "scripts": {
-    "build": "yarn workspace choom-react compile",
-    "theme": "yarn workspace choom-theme compile",
+    "compile:react": "yarn workspace choom-react compile",
+    "compile:svelte": "yarn workspace choom-svelte compile",
+    "compile:theme": "yarn workspace choom-theme compile",
+    "compile:vue": "yarn workspace choom-vue compile",
+    "compile:libs": "yarn compile:react && yarn compile:svelte && yarn compile:vue",
+    "compile": "yarn compile:libs && yarn compile:theme",
     "expo": "yarn workspace choom-expo start"
   }
 }

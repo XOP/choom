@@ -21,7 +21,7 @@ export default defineConfig({
     // https://github.com/vitejs/vite/issues/2679
     commonjsOptions: {
       include: [],
-      exclude: ["choom-theme/*"],
+      exclude: ["choom-theme/*", "clsx/*"],
     },
     cssCodeSplit: true,
     outDir: "lib",
@@ -31,10 +31,11 @@ export default defineConfig({
       name: "choom-svelte",
     },
     rollupOptions: {
-      external: ["choom-theme"],
+      external: ["choom-theme", "clsx"],
       output: {
         globals: {
           "choom-theme": "theme",
+          clsx: "clsx",
         },
       }
     },

@@ -16,7 +16,7 @@ Current version is not stable and most probably **will not** be compatible with 
 Prior to version `1.0.0` it is not recommended to use in anything more complex than an exercise/test/prototype app.
 
 Current version relies on `svelte@3.39.0` due to [this issue](https://github.com/sveltejs/svelte/issues/6584).  
-Note, that this does not limit library for usage with the newer versions of Svelte.
+Note that in your projects, Svelte version should also be `3.39.0` to be fully compatible.
 
 ## Installation
 

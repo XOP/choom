@@ -1,6 +1,8 @@
 <script>
   import { onMount, afterUpdate } from "svelte";
 
+  import clsx from 'clsx';
+
   import Button from "../button/Button.svelte";
   import Heading from "../heading/Heading.svelte";
   import Icon from "../icon/Icon.svelte";
@@ -51,21 +53,21 @@
   }
 </script>
 
-{#if isOpen}
-  <section class={className} bind:this={modalEl}>
-    <Button className="close" size="small" isIcon onClick={handleClose}>
-      <Icon size="inherit">{@html svgX}</Icon>
-    </Button>
+<section class={clsx(className, {
+  isOpen: isOpen
+})} bind:this={modalEl}>
+  <Button className="close" size="small" isIcon onClick={handleClose}>
+    <Icon size="inherit">{@html svgX}</Icon>
+  </Button>
 
-    {#if title}
-      <Heading level="3" colorInherit mb="2">{title}</Heading>
-    {/if}
+  {#if title}
+    <Heading level="3" colorInherit mb="2">{title}</Heading>
+  {/if}
 
-    <div>
-      <slot />
-    </div>
-  </section>
-{/if}
+  <div>
+    <slot />
+  </div>
+</section>
 
 <style lang="scss">
   section {
@@ -82,6 +84,12 @@
     color: var(--color-dark-temp);
 
     font-family: var(--font-family);
+
+    display: none;
+  }
+
+  section.isOpen {
+    display: block;
   }
 
   section > :global(.close) {

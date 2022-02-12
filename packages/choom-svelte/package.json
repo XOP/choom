@@ -1,6 +1,6 @@
 {
   "name": "choom-svelte",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "UI building blocks for your next Svelte 3 prototype",
   "keywords": [
     "svelte",

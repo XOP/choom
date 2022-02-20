@@ -1,10 +1,13 @@
+import { useContext } from "react";
 import PropTypes from "prop-types";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme, { MAP_SPACE, SPACE_TYPES, TEXT_ALIGN_TYPES } from "choom-theme";
+import { MAP_SPACE, SPACE_TYPES, TEXT_ALIGN_TYPES } from "choom-theme";
+
+import { ThemeContext } from "../../theme";
 
 const Card = ({
   className,
@@ -14,6 +17,7 @@ const Card = ({
   padding = "2",
   onClick,
 }) => {
+  const theme = useContext(ThemeContext);
   const space = MAP_SPACE[String(padding)];
 
   return (

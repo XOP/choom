@@ -1,12 +1,15 @@
+import { useContext } from "react";
 import PropTypes from "prop-types";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
 
-import theme from "choom-theme";
+import { ThemeContext } from "../../theme";
 
 const Chip = ({ className, children, title = "", onClick }) => {
+  const theme = useContext(ThemeContext);
+
   const heightEx = `${theme.fontSizeM} * ${theme.lineHeightS} + 2 * ${theme.spaceHalf} + 2 * ${theme.borderSizeRegular}`;
 
   const interactive = onClick && typeof onClick === "function";

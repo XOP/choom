@@ -25,8 +25,8 @@
   ],
   "scripts": {
     "cleanup": "rm -rf lib && mkdir lib",
-    "build:env": "babel src/components -d lib/components",
-    "build:esm": "NODE_ENV=esm babel src/components -d lib/esm/components",
+    "build:env": "babel src/ -d lib/",
+    "build:esm": "NODE_ENV=esm babel src/ -d lib/esm/",
     "build": "yarn cleanup && yarn build:env && yarn build:esm",
     "compile": "yarn build"
   },

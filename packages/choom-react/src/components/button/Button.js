@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import PropTypes from "prop-types";
 
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { css, jsx } from "@emotion/react";
-import theme, { INPUT_TYPES, SIZES_TYPES } from "choom-theme";
+import { INPUT_TYPES, SIZES_TYPES } from "choom-theme";
+
+import { ThemeContext } from "../../theme";
 
 const Button = ({
   className,
@@ -17,6 +20,8 @@ const Button = ({
   fluid = false,
   isIcon = false,
 }) => {
+  const theme = useContext(ThemeContext);
+
   let paddingY = theme.spaceThreeQuarters;
   let paddingX = theme.spaceOneAndHalf;
   let fontSize = theme.fontSizeN;

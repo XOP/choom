@@ -12,6 +12,7 @@ export { default as Icon } from "./icon/Icon";
 export { default as Loader } from "./loader/Loader";
 export { default as Media } from "./media/Media";
 export { default as Modal } from "./modal/Modal";
+export { default as Numeric } from './numeric/Numeric';
 export { default as Panel } from "./panel/Panel";
 export { default as Picture } from "./picture/Picture";
 export { default as Select } from "./select/Select";
